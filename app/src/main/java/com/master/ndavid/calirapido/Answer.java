@@ -6,8 +6,9 @@ package com.master.ndavid.calirapido;
 public class Answer {
 
     private  String answer;
-
-    public Answer(String answer){
+    private boolean correct;
+    public Answer(String answer, boolean correct){
         this.answer = answer;
+        this.correct = correct;
     }
 }
