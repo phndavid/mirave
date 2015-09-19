@@ -8,10 +8,17 @@ import android.view.MenuItem;
 
 public class ActivityQuestion extends ActionBarActivity {
 
+    private Trivia trivia;
+
+    public void initialize(){
+        trivia = new Trivia();
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
+        initialize();
     }
 
 

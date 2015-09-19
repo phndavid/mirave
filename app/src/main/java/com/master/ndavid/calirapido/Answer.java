@@ -11,4 +11,10 @@ public class Answer {
         this.answer = answer;
         this.correct = correct;
     }
+    public String getAnswer(){
+        return answer;
+    }
+    public boolean getCorrect(){
+        return correct;
+    }
 }

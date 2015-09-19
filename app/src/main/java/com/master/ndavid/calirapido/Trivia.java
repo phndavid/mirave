@@ -25,10 +25,13 @@ public class Trivia {
         Answer a = new Answer("Lulada", false);
         Answer b = new Answer("Cholao", false);
         Answer c = new Answer("Agua", false);
-        Answer d = new Answer("Pandebono", false);
+        Answer d = new Answer("Pandebono", true);
         ArrayList<Answer> optionsAnswer = createOptionsAnswer(a,b,c,d);
         Question question = new Question(Question.FIAMBRE,"¿Qué se come en Cali?",optionsAnswer);
         questions.add(question);
+    }
+    public ArrayList<Question> getQuestions(){
+        return  questions;
     }
 
 

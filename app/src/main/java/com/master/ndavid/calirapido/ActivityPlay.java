@@ -1,17 +1,25 @@
 package com.master.ndavid.calirapido;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class ActivityPlay extends ActionBarActivity {
 
+
+    public void btn_play(View view){
+        Intent theIntent = new Intent(this, ActivityQuestion.class);
+        startActivity(theIntent);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
+
     }
 
 

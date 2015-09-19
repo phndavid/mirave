@@ -20,4 +20,13 @@ public class Question {
         this.question = question;
         this.optionsAnswers = optionsAnswers;
     }
+    public String getType(){
+        return type;
+    }
+    public String getQuestion(){
+        return question;
+    }
+    public ArrayList<Answer> getOptionsAnswers(){
+        return  optionsAnswers;
+    }
 }
