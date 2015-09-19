@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class Play extends ActionBarActivity {
+public class ActivityPlay extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
