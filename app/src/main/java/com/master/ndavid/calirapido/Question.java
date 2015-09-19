@@ -21,6 +21,7 @@ public class Question {
         this.optionsAnswers = optionsAnswers;
     }
     public String getType(){
+
         return type;
     }
     public String getQuestion(){

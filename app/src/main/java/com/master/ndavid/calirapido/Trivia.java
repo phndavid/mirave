@@ -22,12 +22,13 @@ public class Trivia {
         return  answers;
     }
     public  void createQuestion(){
-        Answer a = new Answer("Lulada", false);
-        Answer b = new Answer("Cholao", false);
-        Answer c = new Answer("Agua", false);
-        Answer d = new Answer("Pandebono", true);
+        Answer a = new Answer("Gaseosa", false);
+        Answer b = new Answer("Agua", false);
+        Answer c = new Answer("Jugo", false);
+        Answer d = new Answer("Champus", true);
         ArrayList<Answer> optionsAnswer = createOptionsAnswer(a,b,c,d);
-        Question question = new Question(Question.FIAMBRE,"¿Qué se come en Cali?",optionsAnswer);
+        Question question = new Question(Question.FIAMBRE,"2.\tLlavecita vámonos pa’ la fritanga de Doña Rosario, veni y te invito a una empanada. \n" +
+                "¿Con que será que bajamos esto?\n",optionsAnswer);
         questions.add(question);
     }
     public ArrayList<Question> getQuestions(){
