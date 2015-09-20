@@ -1,9 +1,11 @@
 package com.master.ndavid.calirapido;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -18,26 +20,55 @@ public class ActivityQuestion extends ActionBarActivity {
     private Button answer_b;
     private Button answer_c;
     private Button answer_d;
-
+    private int num_question;
+    private String answerCorrect;
     public void initialize(){
         trivia = new Trivia();
+        num_question = 0;
+        answerCorrect = "";
         txt_question = (TextView) findViewById(R.id.txt_question);
-        answer_a = (Button) findViewById(R.id.button);
-        answer_b = (Button) findViewById(R.id.button2);
-        answer_c = (Button) findViewById(R.id.button3);
-        answer_d = (Button) findViewById(R.id.button4);
+        answer_a = (Button) findViewById(R.id.btn_answerA);
+        answer_b = (Button) findViewById(R.id.btn_answerB);
+        answer_c = (Button) findViewById(R.id.btn_answerC);
+        answer_d = (Button) findViewById(R.id.btn_answerD);
     }
     public void setQuestion(int num){
       ArrayList<Question> questions = trivia.getQuestions();
       Question question = questions.get(num);
       ArrayList<Answer> optionsAnswer = question.getOptionsAnswers();
       txt_question.setText(question.getQuestion());
+      answerCorrect = optionsAnswer.get(0).getAnswer();
       answer_a.setText(optionsAnswer.get(0).getAnswer());
       answer_b.setText(optionsAnswer.get(1).getAnswer());
       answer_c.setText(optionsAnswer.get(2).getAnswer());
       answer_d.setText(optionsAnswer.get(3).getAnswer());
     }
-
+    public  void feedBackAnswer(View view){
+        Button b = (Button)view;
+        String buttonText = b.getText().toString();
+        if(buttonText.equals(answerCorrect)){
+            Intent theIntent = new Intent(this, ActivityGoodAnswer.class);
+            startActivity(theIntent);
+        }else{
+            Intent theIntent = new Intent(this, ActivityBadAnswer.class);
+            startActivity(theIntent);
+        }
+    }
+    public void btn_next(View view){
+       setQuestion(num_question++);
+    }
+    public void btn_answerA(View view){
+       feedBackAnswer(view);
+    }
+    public void btn_answerB(View view){
+       feedBackAnswer(view);
+    }
+    public void btn_answerC(View view){
+       feedBackAnswer(view);
+    }
+    public void btn_answerD(View view){
+       feedBackAnswer(view);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +76,6 @@ public class ActivityQuestion extends ActionBarActivity {
         initialize();
         setQuestion(0);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

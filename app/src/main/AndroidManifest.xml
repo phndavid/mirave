@@ -24,6 +24,18 @@
             android:name=".ActivityAnswer"
             android:label="@string/title_activity_answer" >
         </activity>
+        <activity
+            android:name=".ActivityBadAnswer"
+            android:label="@string/title_activity_activity_bad_answer" >
+        </activity>
+        <activity
+            android:name=".ActivityFeedBack"
+            android:label="@string/title_activity_activity_feed_back" >
+        </activity>
+        <activity
+            android:name=".ActivityGoodAnswer"
+            android:label="@string/title_activity_activity_good_answer" >
+        </activity>
     </application>
 
 </manifest>

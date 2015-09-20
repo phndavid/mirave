@@ -5,4 +5,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_question">Question</string>
     <string name="title_activity_answer">Answer</string>
+    <string name="title_activity_activity_bad_answer">ActivityBadAnswer</string>
+    <string name="title_activity_activity_feed_back">ActivityFeedBack</string>
+    <string name="title_activity_activity_good_answer">ActivityGoodAnswer</string>
 </resources>

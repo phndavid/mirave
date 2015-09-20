@@ -10,47 +10,51 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Answer (A)"
-        android:id="@+id/button"
+        android:id="@+id/btn_answerA"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="169dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="btn_answerA" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Answer (B)"
-        android:id="@+id/button2"
+        android:id="@+id/btn_answerB"
         android:layout_marginTop="48dp"
-        android:layout_alignTop="@+id/button"
+        android:layout_alignTop="@+id/btn_answerA"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="btn_answerB" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Answer (C)"
-        android:id="@+id/button3"
-        android:layout_below="@+id/button2"
+        android:id="@+id/btn_answerC"
+        android:layout_below="@+id/btn_answerB"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2" />
+        android:layout_alignRight="@+id/btn_answerB"
+        android:layout_alignEnd="@+id/btn_answerB"
+        android:onClick="btn_answerC" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Answer (D)"
-        android:id="@+id/button4"
-        android:layout_below="@+id/button3"
+        android:id="@+id/btn_answerD"
+        android:layout_below="@+id/btn_answerC"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="btn_answerD" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -62,5 +66,16 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/btn_next"
+        android:layout_above="@+id/btn_answerA"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="32dp"
+        android:onClick="btn_next" />
 
 </RelativeLayout>
