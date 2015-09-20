@@ -1,16 +1,20 @@
 package com.master.ndavid.calirapido;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 
 public class ActivityPlay extends ActionBarActivity {
 
 
+    private Button btn_play;
+    private Typeface tf;
     public void btn_play(View view){
         Intent theIntent = new Intent(this, ActivityIntro.class);
         startActivity(theIntent);
@@ -19,6 +23,9 @@ public class ActivityPlay extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
+        btn_play = (Button) findViewById(R.id.btn_play);
+        tf= Typeface.createFromAsset(getAssets(), "fonts/BebasNeue Light.ttf");
+        btn_play.setTypeface(tf);
 
     }
     @Override

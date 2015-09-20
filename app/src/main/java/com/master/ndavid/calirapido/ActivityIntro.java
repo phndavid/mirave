@@ -1,15 +1,19 @@
 package com.master.ndavid.calirapido;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class ActivityIntro extends ActionBarActivity {
 
+    private TextView txt_intro;
+    private Typeface tf;
     public void btn_continue(View view){
         Intent theIntent = new Intent(this, ActivityQuestion.class);
         startActivity(theIntent);
@@ -18,6 +22,9 @@ public class ActivityIntro extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_intro);
+        tf= Typeface.createFromAsset(getAssets(), "fonts/BebasNeue Light.ttf");
+        txt_intro = (TextView) findViewById(R.id.txt_intro);
+        txt_intro.setTypeface(tf);
     }
 
 
