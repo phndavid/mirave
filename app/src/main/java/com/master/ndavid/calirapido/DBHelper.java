@@ -16,13 +16,13 @@ public class DBHelper {
         //-------------------------------------------------------------------------------------------
         String trivia_1[] = {
                 "Fiambre",
-                "Mira panita llegamos a las canchas panamericanas ve. Te voy a invitar a un cholao.\n" +
-                "¿Vos de que crees que está hecha esta vaina?\n",
+                "Mirá panita llegamos a las canchas Panamericanas vé. Te voy a invitar a un cholao.\n" +
+                "¿Vos de qué crees que está hecha esta vaina?\n",
                 "Hielo, frutas, salsas, leche condensada",
                 "Hielo, queso, helado, coco,",
                 "Hielo, ripio de papa, arroz",
                 "Hielo, lulo, maiz, piña",
-                "Raspado de hielo, típico del departamento del Valle Del Cauca con base de frutas, jarabes de diferentes sabores y leche condesada."};
+                "El Cholado es un raspado de hielo, típico del departamento del Valle Del Cauca. Tiene base de frutas, jarabes de diferentes sabores y leche condesada."};
         trivias.add(trivia_1);
 
         String trivia_2[] = {
@@ -33,24 +33,24 @@ public class DBHelper {
                 "Gaseosa",
                 "Agua,",
                 "Jugo",
-                "En la ciudad de Cali, la mayoría de su población tradicional, acompaña las empanadas con champus, la cual es una bebida típica elaborada con maíz y lulo."
+                "En la ciudad de Cali, la mayoría de su población tradicional acompaña las empanadas con champus la cual es una bebida típica elaborada con maíz y lulo."
         };
         trivias.add(trivia_2);
 
         String trivia_3[] = {
                 "Fiambre",
-                "Por ahí viene el de…",
-                "Manzamora y champus",
+                "¡Uy, escuchá eso! Por ahí viene el de…",
+                "la Manzamora y champus",
                 "La Lulada",
                 "Los Helados",
-                "Ponche",
-                "En la mayoría de los barrios de Cali, es común ver a una persona en bicicleta montado en su triciclo y presionando una bocina con el sonido particular."
+                " el Ponche",
+                "En la mayoría de los barrios de Cali, es común ver a una persona en un triciclo presionando una bocina con ese sonido y vendiendo estos productos."
         };
         trivias.add(trivia_3);
 
         String trivia_4[] = {
                 "Fiambre",
-                "Uy no esa empanda me quedo en un diente, pidamole a Doña Rosario…",
+                "Uy no esa empanda me quedó en un diente, pidamole a Doña Rosario…",
                 "La ñapa",
                 "Una más",
                 "Otrica",
@@ -60,12 +60,12 @@ public class DBHelper {
 
         String trivia_5[] = {
                 "Fiambre",
-                "Amigazo, vos que crees que cual de estas vainas es un pandebono.",
+                "Amigazo, vos que crees que cuál de estas vainas es un pandebono.",
                 "Imagen",
                 "Imagen",
                 "Imagen",
                 "Imagen",
-                "panecillo característico del Valle del Cauca, elaborado con harina de maíz, queso y huevo. Se utiliza para acompañar meriendas o desayunos."};
+                "El pandebono es un panecillo característico del Valle del Cauca, elaborado con harina de maíz, queso y huevo. Se utiliza para acompañar meriendas o desayunos."};
 
         trivias.add(trivia_5);
 

@@ -11,9 +11,11 @@ public class Trivia {
 
     private ArrayList<Question> questions;
     private DBHelper dbHelper;
+    private int puntaje;
     public Trivia(){
         dbHelper = new DBHelper();
         questions = new ArrayList<Question>();
+        puntaje = 0;
         createQuestion();
     }
 
