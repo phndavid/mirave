@@ -40,6 +40,7 @@ public class ActivityQuestion extends ActionBarActivity {
         answer_c.setTypeface(tf);
         answer_d = (Button) findViewById(R.id.btn_answerD);
         answer_d.setTypeface(tf);
+
     }
     public void setQuestion(int num){
         ArrayList<Question> questions = trivia.getOnePlay();
@@ -94,7 +95,7 @@ public class ActivityQuestion extends ActionBarActivity {
         return answers;
     }
     public  void feedBackAnswer(View view){
-       if((num_question+1) < trivia.getQuestions().size()) {
+       if((num_question+1) < trivia.getOnePlay().size()) {
            Button b = (Button) view;
            String buttonText = b.getText().toString();
            if (buttonText.equals(answerCorrect)) {
@@ -112,9 +113,7 @@ public class ActivityQuestion extends ActionBarActivity {
            startActivity(theIntent);
        }
     }
-    public void btn_next(View view){
-       setQuestion(num_question++);
-    }
+
     public void btn_answerA(View view){
        feedBackAnswer(view);
     }
