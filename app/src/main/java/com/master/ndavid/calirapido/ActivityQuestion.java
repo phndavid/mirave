@@ -34,57 +34,16 @@ public class ActivityQuestion extends ActionBarActivity {
         answer_d = (Button) findViewById(R.id.btn_answerD);
     }
     public void setQuestion(int num){
-
-        ArrayList<Question> questions = trivia.getQuestions();
-        Question question = questions.get(num);
-        ArrayList<Answer> optionsAnswer = question.getOptionsAnswers();
-        txt_question.setText(question.getQuestion());
-        answerCorrect = optionsAnswer.get(0).getAnswer();
-        int[] answers = answersWithoutRepeating();
-        answer_a.setText(optionsAnswer.get(answers[0]).getAnswer());
-        answer_b.setText(optionsAnswer.get(answers[1]).getAnswer());
-        answer_c.setText(optionsAnswer.get(answers[2]).getAnswer());
-        answer_d.setText(optionsAnswer.get(answers[3]).getAnswer());
-        feedback = question.getExplain();
-    }
-    public int[] answersWithoutRepeating(){
-        int [] answers = new int[4];
-        double a = Math.random()*5;
-        int answerA =  (int) a;
-        if(answerA==4){
-            System.out.println("entro");
-            answerA=3;
-        }
-        System.out.println("Random de la respuesta:" + answerA);
-        int answerB=0;
-        int answerC=0;
-        int answerD=0;
-        if(answerA==0){
-            answerB=1;
-            answerC=3;
-            answerD=2;
-        }
-        if(answerA==1){
-            answerB=0;
-            answerC=2;
-            answerD=3;
-        }
-        if(answerA==2){
-            answerB=3;
-            answerC=0;
-            answerD=1;
-        }
-        if(answerA==3){
-            answerB=2;
-            answerC=1;
-            answerD=0;
-        }
-        answers[0] = answerA;
-        answers[1] = answerB;
-        answers[2] = answerC;
-        answers[3] = answerD;
-
-        return answers;
+      ArrayList<Question> questions = trivia.getQuestions();
+      Question question = questions.get(num);
+      ArrayList<Answer> optionsAnswer = question.getOptionsAnswers();
+      txt_question.setText(question.getQuestion());
+      answerCorrect = optionsAnswer.get(0).getAnswer();
+      answer_a.setText(optionsAnswer.get(0).getAnswer());
+      answer_b.setText(optionsAnswer.get(1).getAnswer());
+      answer_c.setText(optionsAnswer.get(2).getAnswer());
+      answer_d.setText(optionsAnswer.get(3).getAnswer());
+      feedback = question.getExplain();
     }
     public  void feedBackAnswer(View view){
        if((num_question+1) < trivia.getQuestions().size()) {
