@@ -8,4 +8,5 @@
     <string name="title_activity_activity_bad_answer">ActivityBadAnswer</string>
     <string name="title_activity_activity_feed_back">ActivityFeedBack</string>
     <string name="title_activity_activity_good_answer">ActivityGoodAnswer</string>
+    <string name="title_activity_activity_intro">ActivityIntro</string>
 </resources>

@@ -36,6 +36,10 @@
             android:name=".ActivityGoodAnswer"
             android:label="@string/title_activity_activity_good_answer" >
         </activity>
+        <activity
+            android:name=".ActivityIntro"
+            android:label="@string/title_activity_activity_intro" >
+        </activity>
     </application>
 
 </manifest>

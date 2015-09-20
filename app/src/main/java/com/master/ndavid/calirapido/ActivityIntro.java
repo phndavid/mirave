@@ -8,25 +8,26 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class ActivityPlay extends ActionBarActivity {
+public class ActivityIntro extends ActionBarActivity {
 
-
-    public void btn_play(View view){
-        Intent theIntent = new Intent(this, ActivityIntro.class);
+    public void btn_continue(View view){
+        Intent theIntent = new Intent(this, ActivityQuestion.class);
         startActivity(theIntent);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_play);
-
+        setContentView(R.layout.activity_activity_intro);
     }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_play, menu);
+        getMenuInflater().inflate(R.menu.menu_activity_intro, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
