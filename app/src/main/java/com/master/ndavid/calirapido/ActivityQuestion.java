@@ -1,6 +1,7 @@
 package com.master.ndavid.calirapido;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,7 +24,9 @@ public class ActivityQuestion extends ActionBarActivity {
     private int num_question;
     private String answerCorrect;
     private String feedback;
+    private  Typeface tf;
     public void initialize(){
+        tf=  Typeface.createFromAsset(getAssets(), "fonts/BebasNeue Light.ttf");
         trivia = new Trivia();
         num_question = 0;
         answerCorrect = "";
@@ -38,11 +41,16 @@ public class ActivityQuestion extends ActionBarActivity {
       Question question = questions.get(num);
       ArrayList<Answer> optionsAnswer = question.getOptionsAnswers();
       txt_question.setText(question.getQuestion());
+      txt_question.setTypeface(tf);
       answerCorrect = optionsAnswer.get(0).getAnswer();
       answer_a.setText(optionsAnswer.get(0).getAnswer());
+        answer_a.setTypeface(tf);
       answer_b.setText(optionsAnswer.get(1).getAnswer());
+       answer_b.setTypeface(tf);
       answer_c.setText(optionsAnswer.get(2).getAnswer());
+       answer_c.setTypeface(tf);
       answer_d.setText(optionsAnswer.get(3).getAnswer());
+       answer_d.setTypeface(tf);
       feedback = question.getExplain();
     }
     public  void feedBackAnswer(View view){
@@ -64,9 +72,7 @@ public class ActivityQuestion extends ActionBarActivity {
            startActivity(theIntent);
        }
     }
-    public void btn_next(View view){
-       setQuestion(num_question++);
-    }
+
     public void btn_answerA(View view){
        feedBackAnswer(view);
     }
