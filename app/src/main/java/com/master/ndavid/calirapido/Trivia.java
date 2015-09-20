@@ -1,5 +1,7 @@
 package com.master.ndavid.calirapido;
 
+import android.view.ViewGroup;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -34,6 +36,54 @@ public class Trivia {
     }
     public ArrayList<Question> getQuestions(){
         return  questions;
+    }
+    public ArrayList<Question> getFiambreQuestions(){
+        ArrayList<Question> fiambreQuestions = new ArrayList<Question>();
+        for(int i=0;i<questions.size();i++){
+            if(questions.get(i).getType().equals("Fiambre")){
+                fiambreQuestions.add(questions.get(i));
+            }
+        }
+        return fiambreQuestions;
+    }
+    public ArrayList<Question> getGuanguancoQuestions(){
+        ArrayList<Question> guaguancoQuestions = new ArrayList<Question>();
+        for(int i=0;i<questions.size();i++){
+            if(questions.get(i).getType().equals("Guaguanco")){
+                guaguancoQuestions.add(questions.get(i));
+            }
+        }
+        return guaguancoQuestions;
+    }
+    public ArrayList<Question> getBorondoQuestions(){
+        ArrayList<Question> borondoQuestions = new ArrayList<Question>();
+        for(int i=0;i<questions.size();i++){
+            if(questions.get(i).getType().equals("Pa pegarnos el borondo")){
+                borondoQuestions.add(questions.get(i));
+            }
+        }
+        return borondoQuestions;
+    }
+    public ArrayList<Question> getOnePlay(){
+        ArrayList<Question> onePlay = new ArrayList<Question>();
+
+        double randomEating = Math.random()*5;
+        double randomMusic = Math.random()*4;
+        //double randomTuristicos = Math.random()*4;
+
+        int eating = (int) randomEating;
+        int music = (int) randomMusic;
+        //int turisticos = (int) randomTuristicos;
+
+        Question theEating = getFiambreQuestions().get(eating);
+        Question theMusic = getGuanguancoQuestions().get(music);
+        //Question theTuristicos = getBorondoQuestions().get(turisticos);
+
+        onePlay.add(theEating);
+        onePlay.add(theMusic);
+        //onePlay.add(theTuristicos);
+
+        return onePlay;
     }
 
 }

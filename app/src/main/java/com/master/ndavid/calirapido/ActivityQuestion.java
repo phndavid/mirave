@@ -42,11 +42,10 @@ public class ActivityQuestion extends ActionBarActivity {
         answer_d.setTypeface(tf);
     }
     public void setQuestion(int num){
-        ArrayList<Question> questions = trivia.getQuestions();
+        ArrayList<Question> questions = trivia.getOnePlay();
         Question question = questions.get(num);
         ArrayList<Answer> optionsAnswer = question.getOptionsAnswers();
         txt_question.setText(question.getQuestion());
-        ;
         answerCorrect = optionsAnswer.get(0).getAnswer();
         int[] answers = answerswithoutRepeating();
         answer_a.setText(optionsAnswer.get(answers[0]).getAnswer());

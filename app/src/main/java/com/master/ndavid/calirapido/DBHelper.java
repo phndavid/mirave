@@ -117,9 +117,18 @@ public class DBHelper {
         trivias.add(trivia_9);
 
         //-------------------------------------------------------------------------------------------
-        // Musica
+        // Pa pegarnos el borondo
         //-------------------------------------------------------------------------------------------
-
+        String trivia_10[] = {
+                "Pa pegarnos el borondo",
+                "Si te vas a quedar hasta el domingo, te invito a que tiremos nado en:",
+                "Río Pance",
+                "Río Melendez",
+                "El polideportivo",
+                "El club campestre",
+                "Es tradición en Cali ir los domingos al Río en Pance para pasar un rato en familia y cocinar un rico sancocho"
+        };
+        trivias.add(trivia_10);
 
     }
     public ArrayList<String[]> getTrivias(){
