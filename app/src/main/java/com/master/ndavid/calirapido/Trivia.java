@@ -1,6 +1,8 @@
 package com.master.ndavid.calirapido;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by N.David on 18/09/2015.
@@ -8,28 +10,22 @@ import java.util.ArrayList;
 public class Trivia {
 
     private ArrayList<Question> questions;
-
+    private DBHelper dbHelper;
     public Trivia(){
+        dbHelper = new DBHelper();
         questions = new ArrayList<Question>();
         createQuestion();
     }
-    public ArrayList<Answer> createOptionsAnswer(Answer a,Answer b,Answer c, Answer d){
-        ArrayList<Answer> answers = new ArrayList<Answer>();
-        answers.add(a);
-        answers.add(b);
-        answers.add(c);
-        answers.add(d);
-        return  answers;
-    }
+
     public  void createQuestion(){
-        Answer a = new Answer("Gaseosa", false);
-        Answer b = new Answer("Agua", false);
-        Answer c = new Answer("Jugo", false);
-        Answer d = new Answer("Champus", true);
-        ArrayList<Answer> optionsAnswer = createOptionsAnswer(a,b,c,d);
-        Question question = new Question(Question.FIAMBRE,"2.\tLlavecita vámonos pa’ la fritanga de Doña Rosario, veni y te invito a una empanada. \n" +
-                "¿Con que será que bajamos esto?\n",optionsAnswer);
-        questions.add(question);
+        HashMap<String,String[]> map = dbHelper.getTrivia();
+        for (Map.Entry<String, String[]> entry : map.entrySet()) {
+            String[] value = entry.getValue();
+
+            String key = entry.getKey();
+
+
+        }
     }
     public ArrayList<Question> getQuestions(){
         return  questions;
