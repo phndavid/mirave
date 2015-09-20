@@ -1,17 +1,21 @@
 package com.master.ndavid.calirapido;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
 public class ActivityBadAnswer extends ActionBarActivity {
 
     private TextView txt_explain;
+    private Button btn_continue;
+    private Typeface tf;
     public void btn_continue(View view){
         finish();
     }
@@ -21,7 +25,11 @@ public class ActivityBadAnswer extends ActionBarActivity {
         setContentView(R.layout.activity_activity_bad_answer);
         Bundle bundle = getIntent().getExtras();
         String explication = bundle.getString("FEEDBACK");
+        tf= Typeface.createFromAsset(getAssets(), "fonts/BebasNeue Light.ttf");
+        btn_continue = (Button) findViewById(R.id.btn_continue);
+        btn_continue.setTypeface(tf);
         txt_explain = (TextView) findViewById(R.id.txt_explain);
+        txt_explain.setTypeface(tf);
         txt_explain.setText(explication);
     }
 

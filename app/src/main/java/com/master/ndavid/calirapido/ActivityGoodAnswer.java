@@ -1,14 +1,18 @@
 package com.master.ndavid.calirapido;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 
 public class ActivityGoodAnswer extends ActionBarActivity {
+    private Button btn_continue;
+    private Typeface tf;
     public void btn_continue(View view){
         finish();
     }
@@ -16,6 +20,9 @@ public class ActivityGoodAnswer extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_good_answer);
+        tf= Typeface.createFromAsset(getAssets(), "fonts/BebasNeue Light.ttf");
+        btn_continue= (Button)findViewById(R.id.btn_continue);
+        btn_continue.setTypeface(tf);
     }
 
 
