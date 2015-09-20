@@ -1,6 +1,7 @@
 package com.master.ndavid.calirapido;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,21 +24,29 @@ public class ActivityQuestion extends ActionBarActivity {
     private int num_question;
     private String answerCorrect;
     private String feedback;
+    private Typeface tf;
     public void initialize(){
+        tf=Typeface.createFromAsset(getAssets(),"fonts/BebasNeue Light.ttf");
         trivia = new Trivia();
         num_question = 0;
         answerCorrect = "";
         txt_question = (TextView) findViewById(R.id.txt_question);
+        txt_question.setTypeface(tf);
         answer_a = (Button) findViewById(R.id.btn_answerA);
+        answer_a.setTypeface(tf);
         answer_b = (Button) findViewById(R.id.btn_answerB);
+        answer_b.setTypeface(tf);
         answer_c = (Button) findViewById(R.id.btn_answerC);
+        answer_c.setTypeface(tf);
         answer_d = (Button) findViewById(R.id.btn_answerD);
+        answer_d.setTypeface(tf);
     }
     public void setQuestion(int num){
         ArrayList<Question> questions = trivia.getQuestions();
         Question question = questions.get(num);
         ArrayList<Answer> optionsAnswer = question.getOptionsAnswers();
         txt_question.setText(question.getQuestion());
+        ;
         answerCorrect = optionsAnswer.get(0).getAnswer();
         int[] answers = answerswithoutRepeating();
         answer_a.setText(optionsAnswer.get(answers[0]).getAnswer());
