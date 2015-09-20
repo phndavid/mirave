@@ -46,18 +46,23 @@ public class ActivityQuestion extends ActionBarActivity {
       feedback = question.getExplain();
     }
     public  void feedBackAnswer(View view){
-        Button b = (Button)view;
-        String buttonText = b.getText().toString();
-        if(buttonText.equals(answerCorrect)){
-            Intent theIntent = new Intent(this, ActivityGoodAnswer.class);
-            startActivity(theIntent);
-            setQuestion(++num_question);
-        }else{
-            Intent theIntent = new Intent(this, ActivityBadAnswer.class);
-            theIntent.putExtra("FEEDBACK",feedback);
-            startActivity(theIntent);
-            setQuestion(++num_question);
-        }
+       if((num_question+1) < trivia.getQuestions().size()) {
+           Button b = (Button) view;
+           String buttonText = b.getText().toString();
+           if (buttonText.equals(answerCorrect)) {
+               Intent theIntent = new Intent(this, ActivityGoodAnswer.class);
+               startActivity(theIntent);
+               setQuestion(++num_question);
+           } else {
+               Intent theIntent = new Intent(this, ActivityBadAnswer.class);
+               theIntent.putExtra("FEEDBACK", feedback);
+               startActivity(theIntent);
+               setQuestion(++num_question);
+           }
+       }else{
+           Intent theIntent = new Intent(this, ActivityFeedBack.class);
+           startActivity(theIntent);
+       }
     }
     public void btn_next(View view){
        setQuestion(num_question++);
