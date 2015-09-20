@@ -20,11 +20,15 @@ public class Trivia {
     public  void createQuestion(){
         HashMap<String,String[]> map = dbHelper.getTrivia();
         for (Map.Entry<String, String[]> entry : map.entrySet()) {
+            ArrayList<Answer> optionsAnswer = new ArrayList<Answer>();
             String[] value = entry.getValue();
-
+            optionsAnswer.add(new Answer(value[0],false));
+            optionsAnswer.add(new Answer(value[1],false));
+            optionsAnswer.add(new Answer(value[2],false));
+            optionsAnswer.add(new Answer(value[3],false));
             String key = entry.getKey();
-
-
+            Question question = new Question(Question.FIAMBRE,key,optionsAnswer);
+            questions.add(question);
         }
     }
     public ArrayList<Question> getQuestions(){

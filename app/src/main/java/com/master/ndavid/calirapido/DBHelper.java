@@ -22,10 +22,10 @@ public class DBHelper {
         trivia.put("Llavecita vámonos pa’ la fritanga de Doña Rosario, veni y te invito a una empanada. \n" +
                "¿Con que será que bajamos esto?\n",answer_2);
 
-        String answer_3[] = {"","","",""};
+        String answer_3[] = {"La Lulada","Los Helados","Ponche","Manzamora y champus"};
         trivia.put("Por ahí viene el de…",answer_3);
 
-        String answer_4[] = {"","","",""};
+        String answer_4[] = {"La ñapa","Una más","Otrica","Jugo"};
         trivia.put("Uy no esa empanda me quedo en un diente, pidamole a Doña Rosario…",answer_4);
 
         String answer_5[] = {"","","",""};
@@ -33,16 +33,16 @@ public class DBHelper {
         //-------------------------------------------------------------------------------------------
         // Guaguanco
         //-------------------------------------------------------------------------------------------
-        String answer_6[] = {"","","",""};
+        String answer_6[] = {"Oiga mire vea","Las caleñas son como las flores","Cali pachaguero","Cali"};
         trivia.put("Panita como se llama este tema ‘Oilo’.",answer_6);
 
-        String answer_7[] = {"","","",""};
+        String answer_7[] = {"Menga","La 66","Juanchito","La Sexta"};
         trivia.put("Ve bacan, escucha la canción que está sonando en la radio: “¡Del puente para allá es ________, de puente para aca es Cali!”",answer_7);
 
-        String answer_8[] = {"","","",""};
+        String answer_8[] = {"Modelos","Rusas","El cielo","Las flores"};
         trivia.put("Mira esa vieja Ve, es que definitivamente las caleñas son como:",answer_8);
 
-        String answer_9[] = {"","","",""};
+        String answer_9[] = {"La Salsa","Reguetton","Merengue","Las Baladas"};
         trivia.put("Sabes qué? vámonos azotar baldosa al ritmo de:",answer_9);
         //-------------------------------------------------------------------------------------------
         // Musica

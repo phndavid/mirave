@@ -27,9 +27,9 @@ public class ActivityQuestion extends ActionBarActivity {
         answer_c = (Button) findViewById(R.id.button3);
         answer_d = (Button) findViewById(R.id.button4);
     }
-    public void setQuestion(){
+    public void setQuestion(int num){
       ArrayList<Question> questions = trivia.getQuestions();
-      Question question = questions.get(0);
+      Question question = questions.get(num);
       ArrayList<Answer> optionsAnswer = question.getOptionsAnswers();
       txt_question.setText(question.getQuestion());
       answer_a.setText(optionsAnswer.get(0).getAnswer());
@@ -43,7 +43,7 @@ public class ActivityQuestion extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
         initialize();
-        setQuestion();
+        setQuestion(0);
     }
 
 
