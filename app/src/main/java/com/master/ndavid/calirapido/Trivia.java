@@ -26,14 +26,12 @@ public class Trivia {
             optionsAnswer.add(new Answer(trivia[3],false));
             optionsAnswer.add(new Answer(trivia[4],false));
             optionsAnswer.add(new Answer(trivia[5],false));
-            Question question = new Question(trivia[0],trivia[1],optionsAnswer);
+            Question question = new Question(trivia[0],trivia[1],optionsAnswer,trivia[6]);
             questions.add(question);
         }
     }
     public ArrayList<Question> getQuestions(){
         return  questions;
     }
-
-
 
 }

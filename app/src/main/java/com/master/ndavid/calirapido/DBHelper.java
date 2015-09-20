@@ -64,25 +64,58 @@ public class DBHelper {
                 "Imagen",
                 "Imagen",
                 "Imagen",
-                "Imagen"};
+                "Imagen",
+                "panecillo característico del Valle del Cauca, elaborado con harina de maíz, queso y huevo. Se utiliza para acompañar meriendas o desayunos."};
 
         trivias.add(trivia_5);
 
         //-------------------------------------------------------------------------------------------
         // Guaguanco
         //-------------------------------------------------------------------------------------------
-        /*String answer_6[] = {"Oiga mire vea","Las caleñas son como las flores","Cali pachanguero","Cali"};
-        trivia.put("Panita como se llama este tema ‘Oilo’.",answer_6);
+        String trivia_6[] = {
+                "Guaguanco",
+                "Panita como se llama este tema ‘Oilo’.",
+                "Oiga mire vea",
+                "Las caleñas son como las flores",
+                "Cali pachanguero",
+                "Cali",
+                "Canción de Salsa, interpretada por el grupo niche."
+        };
+        trivias.add(trivia_6);
 
-        String answer_7[] = {"Juanchito","Menga","La 66","La Sexta"};
-        trivia.put("Ve bacan, escucha la canción que está sonando en la radio: “¡Del puente para allá es ________, de puente para aca es Cali!”",answer_7);
+        String trivia_7[] = {
+                "Guaguanco",
+                "Ve bacan, escucha la canción que está sonando en la radio: “¡Del puente para allá es ________, de puente para aca es Cali!”",
+                "Juanchito",
+                "Menga",
+                "La 66",
+                "La Sexta",
+                "Esta canción hace parte de la tradición caleña y es uno de los mas grandes éxitos del grupo."
+        };
+        trivias.add(trivia_7);
 
-        String answer_8[] = {"Las flores","Modelos","Rusas","El cielo"};
-        trivia.put("Mira esa vieja Ve, es que definitivamente las caleñas son como:",answer_8);
+        String trivia_8[] = {
+                "Guaguanco",
+                "Mira esa vieja Ve, es que definitivamente las caleñas son como:",
+                "Las flores",
+                "Modelos",
+                "Rusas",
+                "El cielo",
+                "Las caleñas son como las flores es uno de los mas grandes éxitos de PiPe Pimienta, cantante de música tropical y salsa en la década de los 70’s."
+        };
+        trivias.add(trivia_8);
 
-        String answer_9[] = {"La Salsa","Reguetton","Merengue","Las Baladas"};
-        trivia.put("Sabes qué? vámonos azotar baldosa al ritmo de:",answer_9);
-        */
+        String trivia_9[] = {
+                "Guaguanco",
+                "Sabes qué? vámonos azotar baldosa al ritmo de:",
+                "La Salsa",
+                "Reguetton",
+                "Merengue",
+                "Las Baladas",
+                "La salsa baile represetativo de la sucursal del cielo"
+        };
+        trivias.add(trivia_9);
+
         //-------------------------------------------------------------------------------------------
         // Musica
         //-------------------------------------------------------------------------------------------
