@@ -18,16 +18,15 @@ public class Trivia {
     }
 
     public  void createQuestion(){
-        HashMap<String,String[]> map = dbHelper.getTrivia();
-        for (Map.Entry<String, String[]> trivia : map.entrySet()) {
-            String key = trivia.getKey();
-            String[] value = trivia.getValue();
+        ArrayList<String[]> trivias = dbHelper.getTrivias();
+        for (int i = 0; i < trivias.size(); i++) {
+            String[] trivia = trivias.get(i);
             ArrayList<Answer> optionsAnswer = new ArrayList<Answer>();
-            optionsAnswer.add(new Answer(value[0],true));
-            optionsAnswer.add(new Answer(value[1],false));
-            optionsAnswer.add(new Answer(value[2],false));
-            optionsAnswer.add(new Answer(value[3],false));
-            Question question = new Question(Question.FIAMBRE,key,optionsAnswer);
+            optionsAnswer.add(new Answer(trivia[2],true));
+            optionsAnswer.add(new Answer(trivia[3],false));
+            optionsAnswer.add(new Answer(trivia[4],false));
+            optionsAnswer.add(new Answer(trivia[5],false));
+            Question question = new Question(trivia[0],trivia[1],optionsAnswer);
             questions.add(question);
         }
     }
