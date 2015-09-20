@@ -9,10 +9,8 @@ import android.view.View;
 
 
 public class ActivityGoodAnswer extends ActionBarActivity {
-
     public void btn_continue(View view){
-        Intent theIntent = new Intent(this, ActivityQuestion.class);
-        startActivity(theIntent);
+        finish();
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {

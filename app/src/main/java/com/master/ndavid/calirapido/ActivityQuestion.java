@@ -47,9 +47,11 @@ public class ActivityQuestion extends ActionBarActivity {
         Button b = (Button)view;
         String buttonText = b.getText().toString();
         if(buttonText.equals(answerCorrect)){
+            setQuestion(++num_question);
             Intent theIntent = new Intent(this, ActivityGoodAnswer.class);
             startActivity(theIntent);
         }else{
+            setQuestion(++num_question);
             Intent theIntent = new Intent(this, ActivityBadAnswer.class);
             startActivity(theIntent);
         }
