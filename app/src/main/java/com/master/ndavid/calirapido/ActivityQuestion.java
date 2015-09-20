@@ -22,6 +22,7 @@ public class ActivityQuestion extends ActionBarActivity {
     private Button answer_d;
     private int num_question;
     private String answerCorrect;
+    private String feedback;
     public void initialize(){
         trivia = new Trivia();
         num_question = 0;
@@ -42,18 +43,20 @@ public class ActivityQuestion extends ActionBarActivity {
       answer_b.setText(optionsAnswer.get(1).getAnswer());
       answer_c.setText(optionsAnswer.get(2).getAnswer());
       answer_d.setText(optionsAnswer.get(3).getAnswer());
+      feedback = question.getExplain();
     }
     public  void feedBackAnswer(View view){
         Button b = (Button)view;
         String buttonText = b.getText().toString();
         if(buttonText.equals(answerCorrect)){
-            setQuestion(++num_question);
             Intent theIntent = new Intent(this, ActivityGoodAnswer.class);
             startActivity(theIntent);
-        }else{
             setQuestion(++num_question);
+        }else{
             Intent theIntent = new Intent(this, ActivityBadAnswer.class);
+            theIntent.putExtra("FEEDBACK",feedback);
             startActivity(theIntent);
+            setQuestion(++num_question);
         }
     }
     public void btn_next(View view){

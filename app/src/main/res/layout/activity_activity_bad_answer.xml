@@ -15,4 +15,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="64dp"
         android:onClick="btn_continue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/txt_explain"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

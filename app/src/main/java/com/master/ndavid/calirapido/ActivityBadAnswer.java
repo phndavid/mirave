@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class ActivityBadAnswer extends ActionBarActivity {
 
+    private TextView txt_explain;
     public void btn_continue(View view){
         finish();
     }
@@ -17,6 +19,10 @@ public class ActivityBadAnswer extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_bad_answer);
+        Bundle bundle = getIntent().getExtras();
+        String explication = bundle.getString("FEEDBACK");
+        txt_explain = (TextView) findViewById(R.id.txt_explain);
+        txt_explain.setText(explication);
     }
 
 
