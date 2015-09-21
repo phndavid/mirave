@@ -1,13 +1,19 @@
 package com.master.ndavid.calirapido;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class ActivityFeedBack extends ActionBarActivity {
 
+    public void btn_newGame(View view){
+        Intent theIntent = new Intent(this, ActivityIntro.class);
+        startActivity(theIntent);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

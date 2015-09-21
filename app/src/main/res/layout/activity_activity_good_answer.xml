@@ -14,7 +14,7 @@
         android:id="@+id/btn_continue"
         android:onClick="btn_continue"
         android:background="@android:color/transparent"
-        android:textSize="21dp"
+        android:textSize="15dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:textColor="#ffffff" />

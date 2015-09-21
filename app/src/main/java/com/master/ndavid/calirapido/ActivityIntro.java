@@ -22,7 +22,7 @@ public class ActivityIntro extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_intro);
-        tf= Typeface.createFromAsset(getAssets(), "fonts/BebasNeue Light.ttf");
+        tf= Typeface.createFromAsset(getAssets(), "fonts/CaviarDreams.ttf");
         txt_intro = (TextView) findViewById(R.id.txt_intro);
         txt_intro.setTypeface(tf);
     }

@@ -20,7 +20,7 @@ public class ActivityGoodAnswer extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_good_answer);
-        tf= Typeface.createFromAsset(getAssets(), "fonts/BebasNeue Light.ttf");
+        tf= Typeface.createFromAsset(getAssets(), "fonts/CaviarDreams.ttf");
         btn_continue= (Button)findViewById(R.id.btn_continue);
         btn_continue.setTypeface(tf);
     }

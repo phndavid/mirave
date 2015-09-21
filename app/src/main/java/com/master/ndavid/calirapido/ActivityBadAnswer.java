@@ -25,7 +25,7 @@ public class ActivityBadAnswer extends ActionBarActivity {
         setContentView(R.layout.activity_activity_bad_answer);
         Bundle bundle = getIntent().getExtras();
         String explication = bundle.getString("FEEDBACK");
-        tf= Typeface.createFromAsset(getAssets(), "fonts/BebasNeue Light.ttf");
+        tf= Typeface.createFromAsset(getAssets(), "fonts/CaviarDreams.ttf");
         btn_continue = (Button) findViewById(R.id.btn_continue);
         btn_continue.setTypeface(tf);
         txt_explain = (TextView) findViewById(R.id.txt_explain);

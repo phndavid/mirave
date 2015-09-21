@@ -26,7 +26,7 @@ public class ActivityQuestion extends ActionBarActivity {
     private String feedback;
     private Typeface tf;
     public void initialize(){
-        tf=Typeface.createFromAsset(getAssets(),"fonts/BebasNeue Light.ttf");
+        tf=Typeface.createFromAsset(getAssets(),"fonts/CaviarDreams.ttf");
         trivia = new Trivia();
         num_question = 0;
         answerCorrect = "";

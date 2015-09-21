@@ -12,7 +12,7 @@
         android:id="@+id/txt_intro"
         android:gravity="center"
         android:layout_marginBottom="40dp"
-        android:textSize="21dp"
+        android:textSize="16dp"
         android:layout_above="@+id/btn_continue"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />

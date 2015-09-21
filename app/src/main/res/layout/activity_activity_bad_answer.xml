@@ -15,7 +15,7 @@
         android:onClick="btn_continue"
         android:background="@android:color/transparent"
         android:textColor="#ffffff"
-        android:textSize="21dp"
+        android:textSize="15dp"
         android:layout_marginBottom="111dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/txt_explain"
-        android:textSize="21dp"
+        android:textSize="15dp"
         android:layout_alignTop="@+id/btn_continue"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"

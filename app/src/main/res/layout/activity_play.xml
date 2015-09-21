@@ -16,7 +16,7 @@
         android:id="@+id/btn_play"
         android:onClick="btn_play"
         android:background="@android:color/transparent"
-        android:textSize="22dp"
+        android:textSize="15dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:textColor="#ffffff" />

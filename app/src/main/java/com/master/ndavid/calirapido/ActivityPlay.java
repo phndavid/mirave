@@ -24,7 +24,7 @@ public class ActivityPlay extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
         btn_play = (Button) findViewById(R.id.btn_play);
-        tf= Typeface.createFromAsset(getAssets(), "fonts/BebasNeue Light.ttf");
+        tf= Typeface.createFromAsset(getAssets(), "fonts/CaviarDreams.ttf");
         btn_play.setTypeface(tf);
 
     }
