@@ -237,12 +237,12 @@ public class DBHelper {
         trivias.add(trivia_20);
         String trivia_21[] = {
                 "Palabras tipicas",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
+                "Vos a mí me caíste muy bien vé, de ahora en adelante vamos a ser panitas, ¿Si me entendés?",
+                "Amigos",
+                "Familiares",
+                "Conocidos",
+                "Enemigos",
+                "En Cali se le suele llamar parce, pana o llave a los amigos.\n"
         };
         trivias.add(trivia_21);
 
