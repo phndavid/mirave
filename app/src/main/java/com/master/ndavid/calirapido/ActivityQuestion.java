@@ -23,6 +23,7 @@ public class ActivityQuestion extends ActionBarActivity {
     private Button answer_b;
     private Button answer_c;
     private Button answer_d;
+    private Button btn_replay;
     private int num_question;
     private String answerCorrect;
     private String feedback;
@@ -31,6 +32,7 @@ public class ActivityQuestion extends ActionBarActivity {
 
 
     public void initialize(){
+
         relativeLayout = (RelativeLayout) findViewById(R.id.relaQ);
         tf=Typeface.createFromAsset(getAssets(),"fonts/CaviarDreams.ttf");
         trivia = new Trivia();
@@ -46,6 +48,9 @@ public class ActivityQuestion extends ActionBarActivity {
         answer_c.setTypeface(tf);
         answer_d = (Button) findViewById(R.id.btn_answerD);
         answer_d.setTypeface(tf);
+
+        btn_replay = (Button) findViewById(R.id.btn_replay);
+
 
     }
     public void setQuestion(int num){
@@ -63,6 +68,7 @@ public class ActivityQuestion extends ActionBarActivity {
         answer_c.setText(optionsAnswer.get(answers[2]).getAnswer());
         answer_d.setText(optionsAnswer.get(answers[3]).getAnswer());
         feedback = question.getExplain();
+
     }
     public int[] answerswithoutRepeating(){
         int [] answers = new int[4];

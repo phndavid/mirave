@@ -89,8 +89,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button"
+        android:textSize="15dp"
+        android:background="@android:color/transparent"
+        android:id="@+id/btn_replay"
         android:layout_above="@+id/txt_question"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="72dp" />
