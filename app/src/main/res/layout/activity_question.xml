@@ -21,7 +21,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textColor="#000"
-        android:textSize="15dp"
         android:layout_alignRight="@+id/txt_question"
         android:layout_alignEnd="@+id/txt_question" />
 
@@ -37,7 +36,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textColor="#000"
-        android:textSize="15dp"
         android:layout_alignRight="@+id/btn_answerA"
         android:layout_alignEnd="@+id/btn_answerA" />
 
@@ -53,7 +51,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textColor="#000"
-        android:textSize="15dp"
         android:layout_alignRight="@+id/txt_question"
         android:layout_alignEnd="@+id/txt_question" />
 
@@ -69,7 +66,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textColor="#000"
-        android:textSize="15dp"
         android:layout_alignRight="@+id/txt_question"
         android:layout_alignEnd="@+id/txt_question" />
 
@@ -79,7 +75,6 @@
         android:text="¿Question?"
         android:id="@+id/txt_question"
         android:textColor="#000"
-        android:textSize="25px"
         android:layout_gravity="bottom"
         android:gravity="center"
         android:layout_above="@+id/btn_answerA"
@@ -88,7 +83,7 @@
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:textSize="15dp"
         android:background="@android:color/transparent"
         android:id="@+id/btn_replay"

@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -36,20 +37,54 @@ public class ActivityQuestion extends ActionBarActivity {
     private Bitmap background;
     private BitmapDrawable back;
     private int idBackgroundActual;
-
     private  MediaPlayer mpMazamorra;
     private  MediaPlayer mpVea;
+    private int idsQuestionImages[] = {R.drawable.cholado_xhdpi,R.drawable.empanada_xhdpi,R.drawable.mazamorra_xhdpi,R.drawable.napa_xhdpi,0,
+            R.drawable.oiga_xhdpi, R.drawable.radio_xhdpi,R.drawable.calenas_xhdpi,R.drawable.salsa_xhdpi,
+            R.drawable.pance_xhdpi,R.drawable.trescruces_xhdpi, R.drawable.cuenteros_xhdpi,R.drawable.ermita_xhdpi,
+            R.drawable.feria_xhdpi,R.drawable.alumbrado_xhdpi,R.drawable.macetas_xhdpi,R.drawable.cometa_xhdpi,R.drawable.palabras_xhdpi,
+            R.drawable.palabras_xhdpi,R.drawable.palabras_xhdpi};
+    private int idsOptionsImages[] ={R.drawable.aama_xhdpi,R.drawable.bama_xhdpi, R.drawable.aazul_xhdpi,R.drawable.bazul_xhdpi,
+            R.drawable.arojo_xhdpi,R.drawable.brojo_xhdpi,R.drawable.averde_xhdpi,R.drawable.bverde_xhdpi,
+            R.drawable.aoro_xhdpi,R.drawable.boro_xhdpi,R.drawable.anaranja_xhdpi,R.drawable.bnaranja_xhdpi,
+            R.drawable.arosa_xhdpi,R.drawable.brosa_xhdpi  };
 
+    private String colors[] ={"amarillo","azul","rojo","verde","oro","naranja","rosa"};
+    public int getIdOptions(String color){
+            if(colors[0].equals(color)){
+                return 0;
+            }
+            if(colors[1].equals(color)){
+                return 2;
+            }
+            if(colors[2].equals(color)){
+                return 4;
+            }
+            if(colors[3].equals(color)){
+                return 6;
+            }
+            if(colors[4].equals(color)){
+                return 8;
+            }
+            if(colors[5].equals(color)){
+                return 10;
+            }
+            if(colors[6].equals(color)) {
+                return 12;
+            }
+        return 0;
+    }
     public void initialize(){
-
 
         relativeLayout = (RelativeLayout) findViewById(R.id.relaQ);
         tf=Typeface.createFromAsset(getAssets(),"fonts/CaviarDreams.ttf");
         trivia = new Trivia();
         num_question = 0;
         answerCorrect = "";
+
         txt_question = (TextView) findViewById(R.id.txt_question);
         txt_question.setTypeface(tf);
+
         answer_a = (Button) findViewById(R.id.btn_answerA);
         answer_a.setTypeface(tf);
         answer_b = (Button) findViewById(R.id.btn_answerB);
@@ -66,8 +101,6 @@ public class ActivityQuestion extends ActionBarActivity {
         mpVea=MediaPlayer.create(this, R.raw.vea);
 
 
-
-
     }
     public void setQuestion(int num){
         ArrayList<Question> questions = trivia.getOnePlay();
@@ -81,10 +114,19 @@ public class ActivityQuestion extends ActionBarActivity {
         txt_question.setText(question.getQuestion());
         answerCorrect = optionsAnswer.get(0).getAnswer();
         int[] answers = answerswithoutRepeating();
+        String color = question.getColor();
+        int idOptions = getIdOptions(color);
+        Drawable drawable_a = getResources().getDrawable(idsOptionsImages[idOptions]);
+        Drawable drawable_b = getResources().getDrawable(idsOptionsImages[idOptions+1]);
         answer_a.setText(optionsAnswer.get(answers[0]).getAnswer());
+        answer_a.setBackground(drawable_a);
         answer_b.setText(optionsAnswer.get(answers[1]).getAnswer());
+        answer_b.setBackground(drawable_b);
         answer_c.setText(optionsAnswer.get(answers[2]).getAnswer());
+        answer_c.setBackground(drawable_a);
         answer_d.setText(optionsAnswer.get(answers[3]).getAnswer());
+        answer_d.setBackground(drawable_b);
+
         feedback = question.getExplain();
 
     }
@@ -174,6 +216,41 @@ public class ActivityQuestion extends ActionBarActivity {
     public void btn_answerD(View view){
        feedBackAnswer(view);
     }
+    public int getDrawableIdFromQuestionId(int questionId) {
+        int drawableId = R.drawable.cholado_xhdpi;
+        for (int i = 0; i < idsQuestionImages.length; i++) {
+            if (questionId == (i + 1)) {
+                btn_replay.setEnabled(false);
+                if (questionId == 3) {
+                    mpMazamorra.start();
+
+                    btn_replay.setEnabled(true);
+                    btn_replay.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View view) {
+                            mpMazamorra.start();
+                        }
+                    });
+                }else {
+                    mpMazamorra.stop();
+                }
+                if (questionId == 6) {
+                    mpVea.start();
+
+                    btn_replay.setEnabled(true);
+                    btn_replay.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View view) {
+                            mpVea.start();
+                        }
+                    });
+                }else{
+                    mpVea.stop();
+                }
+                return idsQuestionImages[i];
+            }
+        }
+        return drawableId;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -221,199 +298,6 @@ public class ActivityQuestion extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    public int getDrawableIdFromQuestionId(int questionId){
-        int drawableId =R.drawable.cholado_xhdpi;
-        if(questionId==1){
-            drawableId = R.drawable.cholado_xhdpi;
-            btn_replay.setEnabled(false);
-
-            if(mpMazamorra.isPlaying()==true){
-                mpMazamorra.stop();
-            }
-            if(mpVea.isPlaying()==true){
-                mpVea.stop();
-            }
 
 
-        }
-        if(questionId==2){
-            drawableId = R.drawable.empanada_xhdpi;
-            btn_replay.setEnabled(false);
-
-            if(mpMazamorra.isPlaying()==true){
-                mpMazamorra.stop();
-            }
-            if(mpVea.isPlaying()==true){
-                mpVea.stop();
-            }
-        }
-        if(questionId==3){
-            drawableId = R.drawable.mazamorra_xhdpi;
-                mpMazamorra.start();
-
-            btn_replay.setEnabled(true);
-            btn_replay.setOnClickListener( new View.OnClickListener() {
-                public void onClick(View view){
-                    mpMazamorra.start();
-                }
-            });
-
-
-        }
-        if(questionId==4){
-            drawableId = R.drawable.napa_xhdpi;
-            btn_replay.setEnabled(false);
-
-            if(mpMazamorra.isPlaying()==true){
-                mpMazamorra.stop();
-            }
-            if(mpVea.isPlaying()==true){
-                mpVea.stop();
-            }
-        }
-        if(questionId==5){
-
-            btn_replay.setEnabled(false);
-            if(mpMazamorra.isPlaying()==true){
-                mpMazamorra.stop();
-            }
-            if(mpVea.isPlaying()==true){
-                mpVea.stop();
-            }
-
-        }
-        if(questionId==6){
-            drawableId = R.drawable.oiga_xhdpi;
-            mpVea.start();
-
-            btn_replay.setEnabled(true);
-            btn_replay.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View view) {
-                    mpVea.start();
-                }
-            });
-        }
-        if(questionId==7){
-            drawableId = R.drawable.radio_xhdpi;
-            btn_replay.setEnabled(false);
-            if(mpMazamorra.isPlaying()==true){
-                mpMazamorra.stop();
-            }
-            if(mpVea.isPlaying()==true){
-                mpVea.stop();
-            }
-        }
-        if(questionId==8){
-            drawableId = R.drawable.calenas_xhdpi;
-            btn_replay.setEnabled(false);
-            if(mpMazamorra.isPlaying()==true){
-                mpMazamorra.stop();
-            }
-            if(mpVea.isPlaying()==true){
-                mpVea.stop();
-            }
-        }
-        if(questionId==9){
-            drawableId = R.drawable.salsa_xhdpi;
-            btn_replay.setEnabled(false);
-            if(mpMazamorra.isPlaying()==true){
-                mpMazamorra.stop();
-            }
-            if(mpVea.isPlaying()==true){
-                mpVea.stop();
-            }
-        }
-        if(questionId==10){
-            drawableId = R.drawable.pance_xhdpi;
-            btn_replay.setEnabled(false);
-            if(mpMazamorra.isPlaying()==true){
-                mpMazamorra.stop();
-            }
-            if(mpVea.isPlaying()==true){
-                mpVea.stop();
-            }
-        }
-        if(questionId==11){
-            btn_replay.setEnabled(false);
-            drawableId = R.drawable.trescruces_xhdpi;
-            if(mpMazamorra.isPlaying()==true){
-                mpMazamorra.stop();
-            }
-            if(mpVea.isPlaying()==true){
-                mpVea.stop();
-            }
-        }
-        if(questionId==12){
-            drawableId = R.drawable.cuenteros_xhdpi;
-            btn_replay.setEnabled(false);
-            if(mpMazamorra.isPlaying()==true){
-                mpMazamorra.stop();
-            }
-            if(mpVea.isPlaying()==true){
-                mpVea.stop();
-            }
-        }
-        if(questionId==13){
-            drawableId = R.drawable.ermita_xhdpi;
-            btn_replay.setEnabled(false);
-            if(mpMazamorra.isPlaying()==true){
-                mpMazamorra.stop();
-            }
-            if(mpVea.isPlaying()==true){
-                mpVea.stop();
-            }
-        }
-        if(questionId==14){
-            drawableId = R.drawable.feria_xhdpi;
-            btn_replay.setEnabled(false);
-            if(mpMazamorra.isPlaying()==true){
-                mpMazamorra.stop();
-            }
-            if(mpVea.isPlaying()==true){
-                mpVea.stop();
-            }
-        }
-        if(questionId==15){
-            drawableId = R.drawable.alumbrado_xhdpi;
-            btn_replay.setEnabled(false);
-            if(mpMazamorra.isPlaying()==true){
-                mpMazamorra.stop();
-            }
-            if(mpVea.isPlaying()==true){
-                mpVea.stop();
-            }
-        }
-        if(questionId==16){
-            drawableId = R.drawable.macetas_xhdpi;
-            btn_replay.setEnabled(false);
-            if(mpMazamorra.isPlaying()==true){
-                mpMazamorra.stop();
-            }
-            if(mpVea.isPlaying()==true){
-                mpVea.stop();
-            }
-        }
-        if(questionId==17){
-            drawableId = R.drawable.cometa_xhdpi;
-            btn_replay.setEnabled(false);
-            if(mpMazamorra.isPlaying()==true){
-                mpMazamorra.stop();
-            }
-            if(mpVea.isPlaying()==true){
-                mpVea.stop();
-            }
-        }
-        if(questionId>=18){
-            drawableId = R.drawable.palabras_xhdpi;
-            btn_replay.setEnabled(false);
-            if(mpMazamorra.isPlaying()==true){
-                mpMazamorra.stop();
-            }
-            if(mpVea.isPlaying()==true){
-                mpVea.stop();
-            }
-        }
-        return drawableId;
-
-    }
 }

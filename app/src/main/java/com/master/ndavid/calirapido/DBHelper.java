@@ -23,7 +23,9 @@ public class DBHelper {
                 "Hielo, queso, helado, coco,",
                 "Hielo, ripio de papa, arroz",
                 "Hielo, lulo, maiz, piña",
-                "El Cholado es un raspado de hielo, típico del departamento del Valle Del Cauca. Tiene base de frutas, jarabes de diferentes sabores y leche condesada."};
+                "El Cholado es un raspado de hielo, típico del departamento del Valle Del Cauca. Tiene base de frutas, jarabes de diferentes sabores y leche condesada.",
+                "verde"
+        };
         trivias.add(trivia_1);
 
         String trivia_2[] = {
@@ -35,7 +37,9 @@ public class DBHelper {
                 "Gaseosa",
                 "Agua",
                 "Jugo",
-                "En la ciudad de Cali, la mayoría de su población tradicional acompaña las empanadas con champus la cual es una bebida típica elaborada con maíz y lulo."
+                "En la ciudad de Cali, la mayoría de su población tradicional acompaña las empanadas con champus la cual es una bebida típica elaborada con maíz y lulo.",
+                "rojo"
+
         };
         trivias.add(trivia_2);
 
@@ -47,7 +51,9 @@ public class DBHelper {
                 "La Lulada",
                 "Los Helados",
                 " el Ponche",
-                "En la mayoría de los barrios de Cali, es común ver a una persona en un triciclo presionando una bocina con ese sonido y vendiendo estos productos."
+                "En la mayoría de los barrios de Cali, es común ver a una persona en un triciclo presionando una bocina con ese sonido y vendiendo estos productos.",
+                "naranja"
+
         };
         trivias.add(trivia_3);
 
@@ -59,7 +65,9 @@ public class DBHelper {
                 "Una más",
                 "Otrica",
                 "Jugo",
-                "La comunidad caleña suele utilizar la palabra “ñapa” para pedir más de algo."};
+                "La comunidad caleña suele utilizar la palabra “ñapa” para pedir más de algo.",
+                "amarillo"
+        };
         trivias.add(trivia_4);
 
         String trivia_5[] = {
@@ -70,7 +78,9 @@ public class DBHelper {
                 "Imagen",
                 "Imagen",
                 "Imagen",
-                "El pandebono es un panecillo característico del Valle del Cauca, elaborado con harina de maíz, queso y huevo. Se utiliza para acompañar meriendas o desayunos."};
+                "El pandebono es un panecillo característico del Valle del Cauca, elaborado con harina de maíz, queso y huevo. Se utiliza para acompañar meriendas o desayunos.",
+                "rojo"
+        };
 
         trivias.add(trivia_5);
 
@@ -85,7 +95,8 @@ public class DBHelper {
                 "Las caleñas son como las flores",
                 "Cali pachanguero",
                 "Cali",
-                "Canción de Salsa, interpretada por el grupo niche."
+                "Canción de Salsa, interpretada por el grupo niche.",
+                "rosa"
         };
         trivias.add(trivia_6);
 
@@ -97,7 +108,8 @@ public class DBHelper {
                 "Menga",
                 "La 66",
                 "La Sexta",
-                "Esta canción hace parte de la tradición caleña y es uno de los mas grandes éxitos del grupo."
+                "Esta canción hace parte de la tradición caleña y es uno de los mas grandes éxitos del grupo.",
+                "verde"
         };
         trivias.add(trivia_7);
 
@@ -109,7 +121,8 @@ public class DBHelper {
                 "Modelos",
                 "Rusas",
                 "El cielo",
-                "Las caleñas son como las flores es uno de los mas grandes éxitos de PiPe Pimienta, cantante de música tropical y salsa en la década de los 70’s."
+                "Las caleñas son como las flores es uno de los mas grandes éxitos de PiPe Pimienta, cantante de música tropical y salsa en la década de los 70’s.",
+                "oro"
         };
         trivias.add(trivia_8);
 
@@ -121,7 +134,8 @@ public class DBHelper {
                 "Reguetton",
                 "Merengue",
                 "Las Baladas",
-                "La salsa baile represetativo de la sucursal del cielo"
+                "La salsa baile represetativo de la sucursal del cielo",
+                "rojo"
         };
         trivias.add(trivia_9);
 
@@ -136,7 +150,8 @@ public class DBHelper {
                 "El Río Melendez",
                 "El polideportivo",
                 "El club campestre",
-                "Es tradición en Cali ir los domingos al Río en Pance para pasar un rato en familia y cocinar un rico sancocho."
+                "Es tradición en Cali ir los domingos al Río en Pance para pasar un rato en familia y cocinar un rico sancocho.",
+                "amarillo"
         };
         trivias.add(trivia_10);
         String trivia_11[] = {
@@ -147,7 +162,8 @@ public class DBHelper {
                 "Canchas panamericanas",
                 "Cerro de las tres cruces",
                 "Club campestre",
-                "Uno de los sitios preferidos de los Caleños para hacer ejercicio es el Cerro de la tres cruces, ubicado en el barrio Normandía en el oeste de la ciudad."
+                "Uno de los sitios preferidos de los Caleños para hacer ejercicio es el Cerro de la tres cruces, ubicado en el barrio Normandía en el oeste de la ciudad.",
+                "rosa"
         };
         trivias.add(trivia_11);
         String trivia_12[] = {
@@ -158,7 +174,8 @@ public class DBHelper {
                 "Parque de la Caña",
                 "Parque de Jovita Feijoo",
                 "San Antonio",
-                "En el barrio San Antonio se encuentran una de las iglesias más históricas de la ciudad, aquí se reúnen personas a contar historias o cuentos que hacen reír."
+                "En el barrio San Antonio se encuentran una de las iglesias más históricas de la ciudad, aquí se reúnen personas a contar historias o cuentos que hacen reír.",
+                "oro"
         };
         trivias.add(trivia_12);
         String trivia_13[] = {
@@ -169,7 +186,8 @@ public class DBHelper {
                 "Iglesia la Ermita",
                 "Plaza de Toros",
                 "Estación del Ferrocarril",
-                "El bulevar del río es un sendero peatonal, al margen del río Cali, que recorre varios sitios turísticos como la Ermita y el Gato de Tejada."
+                "El bulevar del río es un sendero peatonal, al margen del río Cali, que recorre varios sitios turísticos como la Ermita y el Gato de Tejada.",
+                "verde"
         };
         trivias.add(trivia_13);
         //-------------------------------------------------------------------------------------------
@@ -183,7 +201,8 @@ public class DBHelper {
                 "El Festival Mundial de Salsa",
                 "La Feria de las Flores",
                 "El Petronio Alvares",
-                "A partir del 25 de diciembre, en Cali se celebra su fiesta más popular, la Feria de Cali, 5 días de fiesta y homenajes a la cultura caleña."
+                "A partir del 25 de diciembre, en Cali se celebra su fiesta más popular, la Feria de Cali, 5 días de fiesta y homenajes a la cultura caleña.",
+                "rojo"
         };
         trivias.add(trivia_14);
         String trivia_15[] = {
@@ -195,6 +214,7 @@ public class DBHelper {
                 "La plaza de Caicedo",
                 "La Rueda",
                 "A partir del 7 de diciembre hasta principios de enero, se exhibe en el Bulevar del Río el alumbrado navideño de la ciudad el cual es visitado por muchos habitantes y visitantes."
+                ,"azul"
         };
         trivias.add(trivia_15);
         String trivia_16[] = {
@@ -205,7 +225,8 @@ public class DBHelper {
                 "Almojabanas",
                 "Canicas",
                 "Lamparas",
-                "En Cali es costumbre celebrar el día de los ahijados regalando unas deliciosas macetas la cual es un arreglo de figuras de azúcar adornadas de papelillos de colores."
+                "En Cali es costumbre celebrar el día de los ahijados regalando unas deliciosas macetas la cual es un arreglo de figuras de azúcar adornadas de papelillos de colores.",
+                "naranja"
         };
         trivias.add(trivia_16);
         String trivia_17[] = {
@@ -216,7 +237,8 @@ public class DBHelper {
                 "Marzo",
                 "Diciembre",
                 "Junio",
-                "Durante el mes de agosto, los parques de Cali se llenan de gente para elevar cometas de todo tipo y estilo."
+                "Durante el mes de agosto, los parques de Cali se llenan de gente para elevar cometas de todo tipo y estilo.",
+                "amarillo"
         };
         trivias.add(trivia_17);
         //-------------------------------------------------------------------------------------------
@@ -230,7 +252,8 @@ public class DBHelper {
                 "Caja",
                 "Flor",
                 "Mujer",
-                "Cali es la única ciudad del mundo que le dice ‘chuspa’ a una bolsa de plástico. Una tradición un poco rara."
+                "Cali es la única ciudad del mundo que le dice ‘chuspa’ a una bolsa de plástico. Una tradición un poco rara.",
+                "oro"
         };
         trivias.add(trivia_18);
         String trivia_19[] = {
@@ -241,7 +264,8 @@ public class DBHelper {
                 "Un arma de fuego",
                 "Un alambre",
                 "Un ave exótica de la región",
-                "La expresión ‘fiambre’ es una forma muy popular en la ciudad para referirse a la comida."
+                "La expresión ‘fiambre’ es una forma muy popular en la ciudad para referirse a la comida.",
+                "oro"
         };
         trivias.add(trivia_19);
         String trivia_20[] = {
@@ -252,7 +276,8 @@ public class DBHelper {
                 "Fanáticos del fútbol",
                 "Fanáticos del ajedrez",
                 "Fanáticos del ballet",
-                "El melómano es aquél que siente extrema pasión por la música. En Cali lo hacemos por la salsa."
+                "El melómano es aquél que siente extrema pasión por la música. En Cali lo hacemos por la salsa.",
+                "oro"
         };
         trivias.add(trivia_20);
         String trivia_21[] = {
@@ -263,7 +288,8 @@ public class DBHelper {
                 "Familiares",
                 "Conocidos",
                 "Enemigos",
-                "En Cali se le suele llamar parce, pana o llave a los amigos.\n"
+                "En Cali se le suele llamar parce, pana o llave a los amigos.",
+                "oro"
         };
         trivias.add(trivia_21);
 

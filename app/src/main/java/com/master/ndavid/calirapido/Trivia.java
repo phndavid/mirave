@@ -34,7 +34,7 @@ public class Trivia {
             optionsAnswer.add(new Answer(trivia[4],false));
             optionsAnswer.add(new Answer(trivia[5],false));
             optionsAnswer.add(new Answer(trivia[6],false));
-            Question question = new Question(Integer.parseInt(trivia[0]),trivia[1],trivia[2],optionsAnswer,trivia[7]);
+            Question question = new Question(Integer.parseInt(trivia[0]),trivia[1],trivia[2],optionsAnswer,trivia[7],trivia[8]);
             questions.add(question);
         }
     }
