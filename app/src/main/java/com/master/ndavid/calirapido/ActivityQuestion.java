@@ -127,6 +127,7 @@ public class ActivityQuestion extends ActionBarActivity {
                Intent theIntent = new Intent(this, ActivityGoodAnswer.class);
                startActivity(theIntent);
                setQuestion(++num_question);
+               
            } else {
                Intent theIntent = new Intent(this, ActivityBadAnswer.class);
                theIntent.putExtra("FEEDBACK", feedback);
@@ -188,10 +189,26 @@ public class ActivityQuestion extends ActionBarActivity {
         if(questionId==1){
             drawableId = R.drawable.cholado_xhdpi;
             btn_replay.setEnabled(false);
+
+            if(mpMazamorra.isPlaying()==true){
+                mpMazamorra.stop();
+            }
+            if(mpVea.isPlaying()==true){
+                mpVea.stop();
+            }
+
+
         }
         if(questionId==2){
             drawableId = R.drawable.empanada_xhdpi;
             btn_replay.setEnabled(false);
+
+            if(mpMazamorra.isPlaying()==true){
+                mpMazamorra.stop();
+            }
+            if(mpVea.isPlaying()==true){
+                mpVea.stop();
+            }
         }
         if(questionId==3){
             drawableId = R.drawable.mazamorra_xhdpi;
@@ -209,10 +226,23 @@ public class ActivityQuestion extends ActionBarActivity {
         if(questionId==4){
             drawableId = R.drawable.napa_xhdpi;
             btn_replay.setEnabled(false);
+
+            if(mpMazamorra.isPlaying()==true){
+                mpMazamorra.stop();
+            }
+            if(mpVea.isPlaying()==true){
+                mpVea.stop();
+            }
         }
         if(questionId==5){
 
             btn_replay.setEnabled(false);
+            if(mpMazamorra.isPlaying()==true){
+                mpMazamorra.stop();
+            }
+            if(mpVea.isPlaying()==true){
+                mpVea.stop();
+            }
 
         }
         if(questionId==6){
@@ -229,53 +259,124 @@ public class ActivityQuestion extends ActionBarActivity {
         if(questionId==7){
             drawableId = R.drawable.radio_xhdpi;
             btn_replay.setEnabled(false);
+            if(mpMazamorra.isPlaying()==true){
+                mpMazamorra.stop();
+            }
+            if(mpVea.isPlaying()==true){
+                mpVea.stop();
+            }
         }
         if(questionId==8){
             drawableId = R.drawable.calenas_xhdpi;
             btn_replay.setEnabled(false);
+            if(mpMazamorra.isPlaying()==true){
+                mpMazamorra.stop();
+            }
+            if(mpVea.isPlaying()==true){
+                mpVea.stop();
+            }
         }
         if(questionId==9){
             drawableId = R.drawable.salsa_xhdpi;
             btn_replay.setEnabled(false);
+            if(mpMazamorra.isPlaying()==true){
+                mpMazamorra.stop();
+            }
+            if(mpVea.isPlaying()==true){
+                mpVea.stop();
+            }
         }
         if(questionId==10){
             drawableId = R.drawable.pance_xhdpi;
             btn_replay.setEnabled(false);
+            if(mpMazamorra.isPlaying()==true){
+                mpMazamorra.stop();
+            }
+            if(mpVea.isPlaying()==true){
+                mpVea.stop();
+            }
         }
         if(questionId==11){
             btn_replay.setEnabled(false);
             drawableId = R.drawable.trescruces_xhdpi;
+            if(mpMazamorra.isPlaying()==true){
+                mpMazamorra.stop();
+            }
+            if(mpVea.isPlaying()==true){
+                mpVea.stop();
+            }
         }
         if(questionId==12){
             drawableId = R.drawable.cuenteros_xhdpi;
             btn_replay.setEnabled(false);
+            if(mpMazamorra.isPlaying()==true){
+                mpMazamorra.stop();
+            }
+            if(mpVea.isPlaying()==true){
+                mpVea.stop();
+            }
         }
         if(questionId==13){
             drawableId = R.drawable.ermita_xhdpi;
             btn_replay.setEnabled(false);
+            if(mpMazamorra.isPlaying()==true){
+                mpMazamorra.stop();
+            }
+            if(mpVea.isPlaying()==true){
+                mpVea.stop();
+            }
         }
         if(questionId==14){
             drawableId = R.drawable.feria_xhdpi;
             btn_replay.setEnabled(false);
+            if(mpMazamorra.isPlaying()==true){
+                mpMazamorra.stop();
+            }
+            if(mpVea.isPlaying()==true){
+                mpVea.stop();
+            }
         }
         if(questionId==15){
             drawableId = R.drawable.alumbrado_xhdpi;
             btn_replay.setEnabled(false);
+            if(mpMazamorra.isPlaying()==true){
+                mpMazamorra.stop();
+            }
+            if(mpVea.isPlaying()==true){
+                mpVea.stop();
+            }
         }
         if(questionId==16){
             drawableId = R.drawable.macetas_xhdpi;
             btn_replay.setEnabled(false);
+            if(mpMazamorra.isPlaying()==true){
+                mpMazamorra.stop();
+            }
+            if(mpVea.isPlaying()==true){
+                mpVea.stop();
+            }
         }
         if(questionId==17){
             drawableId = R.drawable.cometa_xhdpi;
             btn_replay.setEnabled(false);
+            if(mpMazamorra.isPlaying()==true){
+                mpMazamorra.stop();
+            }
+            if(mpVea.isPlaying()==true){
+                mpVea.stop();
+            }
         }
         if(questionId>=18){
             drawableId = R.drawable.palabras_xhdpi;
             btn_replay.setEnabled(false);
+            if(mpMazamorra.isPlaying()==true){
+                mpMazamorra.stop();
+            }
+            if(mpVea.isPlaying()==true){
+                mpVea.stop();
+            }
         }
         return drawableId;
-
 
     }
 }
