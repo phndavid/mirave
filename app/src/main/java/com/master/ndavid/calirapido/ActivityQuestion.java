@@ -1,5 +1,6 @@
 package com.master.ndavid.calirapido;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
@@ -30,8 +31,11 @@ public class ActivityQuestion extends ActionBarActivity {
     private Typeface tf;
     private RelativeLayout relativeLayout;
 
+    private  MediaPlayer mpMazamorra;
+    private  MediaPlayer mpVea;
 
     public void initialize(){
+
 
         relativeLayout = (RelativeLayout) findViewById(R.id.relaQ);
         tf=Typeface.createFromAsset(getAssets(),"fonts/CaviarDreams.ttf");
@@ -50,6 +54,12 @@ public class ActivityQuestion extends ActionBarActivity {
         answer_d.setTypeface(tf);
 
         btn_replay = (Button) findViewById(R.id.btn_replay);
+        btn_replay.setEnabled(false);
+
+        mpMazamorra = MediaPlayer.create(this, R.raw.mazamorra);
+        mpVea=MediaPlayer.create(this, R.raw.vea);
+
+
 
 
     }
@@ -149,6 +159,9 @@ public class ActivityQuestion extends ActionBarActivity {
         setQuestion(0);
     }
 
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -174,61 +187,92 @@ public class ActivityQuestion extends ActionBarActivity {
         int drawableId =R.drawable.cholado_xhdpi;
         if(questionId==1){
             drawableId = R.drawable.cholado_xhdpi;
+            btn_replay.setEnabled(false);
         }
         if(questionId==2){
             drawableId = R.drawable.empanada_xhdpi;
+            btn_replay.setEnabled(false);
         }
         if(questionId==3){
             drawableId = R.drawable.mazamorra_xhdpi;
-            MediaPlayer mp = MediaPlayer.create(this, R.raw.mazamorra);
-                mp.start();
+                mpMazamorra.start();
+
+            btn_replay.setEnabled(true);
+            btn_replay.setOnClickListener( new View.OnClickListener() {
+                public void onClick(View view){
+                    mpMazamorra.start();
+                }
+            });
+
+
         }
         if(questionId==4){
             drawableId = R.drawable.napa_xhdpi;
+            btn_replay.setEnabled(false);
         }
         if(questionId==5){
+
+            btn_replay.setEnabled(false);
 
         }
         if(questionId==6){
             drawableId = R.drawable.oiga_xhdpi;
-            MediaPlayer mp = MediaPlayer.create(this, R.raw.vea);
-            mp.start();
+            mpVea.start();
+
+            btn_replay.setEnabled(true);
+            btn_replay.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    mpVea.start();
+                }
+            });
         }
         if(questionId==7){
             drawableId = R.drawable.radio_xhdpi;
+            btn_replay.setEnabled(false);
         }
         if(questionId==8){
             drawableId = R.drawable.calenas_xhdpi;
+            btn_replay.setEnabled(false);
         }
         if(questionId==9){
             drawableId = R.drawable.salsa_xhdpi;
+            btn_replay.setEnabled(false);
         }
         if(questionId==10){
             drawableId = R.drawable.pance_xhdpi;
+            btn_replay.setEnabled(false);
         }
         if(questionId==11){
+            btn_replay.setEnabled(false);
             drawableId = R.drawable.trescruces_xhdpi;
         }
         if(questionId==12){
             drawableId = R.drawable.cuenteros_xhdpi;
+            btn_replay.setEnabled(false);
         }
         if(questionId==13){
             drawableId = R.drawable.ermita_xhdpi;
+            btn_replay.setEnabled(false);
         }
         if(questionId==14){
             drawableId = R.drawable.feria_xhdpi;
+            btn_replay.setEnabled(false);
         }
         if(questionId==15){
             drawableId = R.drawable.alumbrado_xhdpi;
+            btn_replay.setEnabled(false);
         }
         if(questionId==16){
             drawableId = R.drawable.macetas_xhdpi;
+            btn_replay.setEnabled(false);
         }
         if(questionId==17){
             drawableId = R.drawable.cometa_xhdpi;
+            btn_replay.setEnabled(false);
         }
         if(questionId>=18){
             drawableId = R.drawable.palabras_xhdpi;
+            btn_replay.setEnabled(false);
         }
         return drawableId;
 
