@@ -31,7 +31,7 @@ public class DBHelper {
                 "¿Con que será que bajamos esto?\n",
                 "Champus",
                 "Gaseosa",
-                "Agua,",
+                "Agua",
                 "Jugo",
                 "En la ciudad de Cali, la mayoría de su población tradicional acompaña las empanadas con champus la cual es una bebida típica elaborada con maíz y lulo."
         };
@@ -126,9 +126,125 @@ public class DBHelper {
                 "Río Melendez",
                 "El polideportivo",
                 "El club campestre",
-                "Es tradición en Cali ir los domingos al Río en Pance para pasar un rato en familia y cocinar un rico sancocho"
+                "Es tradición en Cali ir los domingos al Río en Pance para pasar un rato en familia y cocinar un rico sancocho."
         };
         trivias.add(trivia_10);
+        String trivia_11[] = {
+                "Pa pegarnos el borondo",
+                "Ve te veo como gordo, deberíamos de ir mañana a quemar esas empanaditas a:",
+                "Gimnasio",
+                "Canchas panamericanas",
+                "Cerro de las tres cruces",
+                "Club campestre",
+                "Uno de los sitios preferidos de los Caleños para hacer ejercicio es el Cerro de la tres cruces, ubicado en el barrio Normandía en el oeste de la ciudad."
+        };
+        trivias.add(trivia_11);
+        String trivia_12[] = {
+                "Pa pegarnos el borondo",
+                "Pelao estás como achantado, vamos a tirar caja escuchando a los cuenteros en:",
+                "La estatua de Sebastián de Belalcazar",
+                "Parque de la Caña",
+                "Parque de Jovita Feijoo",
+                "San Antonio",
+                "En el barrio San Antonio se encuentran una de las iglesias más históricas de la ciudad, aquí se reúnen personas a contar historias o cuentos que hacen reír."
+        };
+        trivias.add(trivia_12);
+        String trivia_13[] = {
+                "Pa pegarnos el borondo",
+                "Tengo ganas de salir a darme un borondo, camina pal Bulevar del Río y de paso de presento:",
+                "Iglesia la Merced",
+                "Iglesia la Ermita",
+                "Plaza de Toros",
+                "Estación del Ferrocarril",
+                "El bulevar del río es un sendero peatonal, al margen del río Cali, que recorre varios sitios turísticos como la Ermita y el Gato de Tejada."
+        };
+        trivias.add(trivia_13);
+        //-------------------------------------------------------------------------------------------
+        // Cultura
+        //-------------------------------------------------------------------------------------------
+        String trivia_14[] = {
+                "Cultura",
+                "Parcerito, vos me caíste muy bien, te invito a que vengas el 25 de diciembre para que disfrutemos de:",
+                "La Feria de Cali",
+                "El Festival Mundial de Salsa",
+                "La Feria de las Flores",
+                "El Petronio Alvares",
+                "A partir del 25 de diciembre, en Cali se celebra su fiesta más popular, la Feria de Cali, 5 días de fiesta y homenajes a la cultura caleña."
+        };
+        trivias.add(trivia_14);
+        String trivia_15[] = {
+                "Cultura",
+                "Panita, si vas a volver por estos lados en diciembre me avisás para que vayamos al Bulevar del Río y veas lo bonito que es:",
+                "El Alumbrado de Cali",
+                "El Río Cali",
+                "La plaza de Caicedo",
+                "La Rueda",
+                "A partir del 7 de diciembre hasta principios de enero, se exhibe en el Bulevar del Río el alumbrado navideño de la ciudad el cual es visitado por muchos habitantes y visitantes."
+        };
+        trivias.add(trivia_15);
+        String trivia_16[] = {
+                "Cultura",
+                "Panita, ¿Vos no tenés ahijados? Aquí en Cali le podés dar el mejor regalo, comprale unas:",
+                "Macetas",
+                "Almojabanas",
+                "Canicas",
+                "Lamparas",
+                "En Cali es costumbre celebrar el día de los ahijados regalando unas deliciosas macetas la cual es un arreglo de figuras de azúcar adornadas de papelillos de colores."
+        };
+        trivias.add(trivia_16);
+        String trivia_17[] = {
+                "Cultura",
+                "¿Sabes que me encantaba hacer cuando pequeño? Ir a volar cometa al parque del Ingenio, si querés probar pegate otro borondo por Cali en el mes de:",
+                "Agosto",
+                "Marzo",
+                "Diciembre",
+                "Junio",
+                "Durante el mes de agosto, los parques de Cali se llenan de gente para elevar cometas de todo tipo y estilo."
+        };
+        trivias.add(trivia_17);
+        //-------------------------------------------------------------------------------------------
+        // Palabras tipicas
+        //-------------------------------------------------------------------------------------------
+        String trivia_18[] = {
+                "Palabras tipicas",
+                "Mirá, la gente a veces me dice que los caleños hablamos muy raro vé, ¿Vos si me entendes si te digo que pidas una ‘chuspa’?",
+                "Bolsa",
+                "Caja",
+                "Flor",
+                "Mujer",
+                "Cali es la única ciudad del mundo que le dice ‘chuspa’ a una bolsa de plástico. Una tradición un poco rara."
+        };
+        trivias.add(trivia_18);
+        String trivia_19[] = {
+                "Palabras tipicas",
+                "Mirá, la gente a veces me dice que los caleños hablamos muy raro vé, ¿Vos si me entendes si te digo que vayamos por el ‘fiambre’?",
+                "La comida",
+                "Un arma de fuego",
+                "Un alambre",
+                "Un ave exótica de la región",
+                "La expresión ‘fiambre’ es una forma muy popular en la ciudad para referirse a la comida."
+        };
+        trivias.add(trivia_19);
+        String trivia_20[] = {
+                "Palabras tipicas",
+                "Panita, por ahí dicen la malas lenguas que en Cali todos somos ‘melómanos’, ¡Y la verdad es que sí! ¿Vos si sabes de qué te estoy hablando?",
+                "Fanáticos de la salsa y la música\n",
+                "Fanáticos del fútbol",
+                "Fanáticos del ajedrez",
+                "Fanáticos del ballet\n",
+                "El melómano es aquél que siente extrema pasión por la música. En Cali lo hacemos por la salsa."
+        };
+        trivias.add(trivia_20);
+        String trivia_21[] = {
+                "Palabras tipicas",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+        };
+        trivias.add(trivia_21);
 
     }
     public ArrayList<String[]> getTrivias(){
