@@ -14,8 +14,12 @@ public class ActivityIntro extends ActionBarActivity {
 
     private TextView txt_intro;
     private Typeface tf;
+    private Trivia trivia;
+
+
     public void btn_continue(View view){
         Intent theIntent = new Intent(this, ActivityQuestion.class);
+        //theIntent.putExtra("")
         startActivity(theIntent);
     }
     @Override

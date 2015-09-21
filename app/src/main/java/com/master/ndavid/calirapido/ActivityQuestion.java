@@ -2,7 +2,10 @@ package com.master.ndavid.calirapido;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
+import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -30,6 +33,9 @@ public class ActivityQuestion extends ActionBarActivity {
     private String feedback;
     private Typeface tf;
     private RelativeLayout relativeLayout;
+    private Bitmap background;
+    private BitmapDrawable back;
+    private int idBackgroundActual;
 
     private  MediaPlayer mpMazamorra;
     private  MediaPlayer mpVea;
@@ -68,7 +74,9 @@ public class ActivityQuestion extends ActionBarActivity {
         Question question = questions.get(num);
         int id = question.getId();
         int draId = getDrawableIdFromQuestionId(id);
-        relativeLayout.setBackgroundResource(draId);
+        idBackgroundActual = draId;
+        //relativeLayout.setBackgroundResource(draId);
+        loadBackground(draId);
         ArrayList<Answer> optionsAnswer = question.getOptionsAnswers();
         txt_question.setText(question.getQuestion());
         answerCorrect = optionsAnswer.get(0).getAnswer();
@@ -79,6 +87,20 @@ public class ActivityQuestion extends ActionBarActivity {
         answer_d.setText(optionsAnswer.get(answers[3]).getAnswer());
         feedback = question.getExplain();
 
+    }
+    public void loadBackground(int id){
+        background = BitmapFactory.decodeStream(getResources().openRawResource(id));
+        back = new BitmapDrawable(getResources(),background);
+        relativeLayout.setBackground(back);
+    }
+    public void unloadBackground(){
+        if(relativeLayout!=null){
+            relativeLayout.setBackground(null);
+        }
+        if(back!=null){
+            background.recycle();
+        }
+        back=null;
     }
     public int[] answerswithoutRepeating(){
         int [] answers = new int[4];
@@ -160,8 +182,23 @@ public class ActivityQuestion extends ActionBarActivity {
         setQuestion(0);
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        unloadBackground();
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unloadBackground();
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadBackground(idBackgroundActual);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
