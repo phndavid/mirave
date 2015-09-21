@@ -15,6 +15,7 @@ public class DBHelper {
         // Fiambre
         //-------------------------------------------------------------------------------------------
         String trivia_1[] = {
+                "1",
                 "Fiambre",
                 "Mirá panita llegamos a las canchas Panamericanas vé. Te voy a invitar a un cholao.\n" +
                 "¿Vos de qué crees que está hecha esta vaina?\n",
@@ -26,6 +27,7 @@ public class DBHelper {
         trivias.add(trivia_1);
 
         String trivia_2[] = {
+                "2",
                 "Fiambre",
                 "Llavecita vámonos pa’ la fritanga de Doña Rosario, veni y te invito a una empanada. \n" +
                 "¿Con que será que bajamos esto?\n",
@@ -38,6 +40,7 @@ public class DBHelper {
         trivias.add(trivia_2);
 
         String trivia_3[] = {
+                "3",
                 "Fiambre",
                 "¡Uy, escuchá eso! Por ahí viene el de…",
                 "la Manzamora y champus",
@@ -49,6 +52,7 @@ public class DBHelper {
         trivias.add(trivia_3);
 
         String trivia_4[] = {
+                "4",
                 "Fiambre",
                 "Uy no esa empanda me quedó en un diente, pidamole a Doña Rosario…",
                 "La ñapa",
@@ -59,6 +63,7 @@ public class DBHelper {
         trivias.add(trivia_4);
 
         String trivia_5[] = {
+                "5",
                 "Fiambre",
                 "Amigazo, vos que crees que cuál de estas vainas es un pandebono.",
                 "Imagen",
@@ -73,6 +78,7 @@ public class DBHelper {
         // Guaguanco
         //-------------------------------------------------------------------------------------------
         String trivia_6[] = {
+                "6",
                 "Guaguanco",
                 "Panita como se llama este tema ‘Oilo’.",
                 "Oiga mire vea",
@@ -84,6 +90,7 @@ public class DBHelper {
         trivias.add(trivia_6);
 
         String trivia_7[] = {
+                "7",
                 "Guaguanco",
                 "Ve bacan, escucha la canción que está sonando en la radio: “¡Del puente para allá es ________, de puente para aca es Cali!”",
                 "Juanchito",
@@ -95,6 +102,7 @@ public class DBHelper {
         trivias.add(trivia_7);
 
         String trivia_8[] = {
+                "8",
                 "Guaguanco",
                 "Mira esa vieja Ve, es que definitivamente las caleñas son como:",
                 "Las flores",
@@ -106,6 +114,7 @@ public class DBHelper {
         trivias.add(trivia_8);
 
         String trivia_9[] = {
+                "9",
                 "Guaguanco",
                 "Sabes qué? vámonos azotar baldosa al ritmo de:",
                 "La Salsa",
@@ -120,6 +129,7 @@ public class DBHelper {
         // Pa pegarnos el borondo
         //-------------------------------------------------------------------------------------------
         String trivia_10[] = {
+                "10",
                 "Pa pegarnos el borondo",
                 "Si te vas a quedar hasta el domingo, te invito a que tiremos nado en:",
                 "Río Pance",
@@ -130,6 +140,7 @@ public class DBHelper {
         };
         trivias.add(trivia_10);
         String trivia_11[] = {
+                "11",
                 "Pa pegarnos el borondo",
                 "Ve te veo como gordo, deberíamos de ir mañana a quemar esas empanaditas a:",
                 "Gimnasio",
@@ -140,6 +151,7 @@ public class DBHelper {
         };
         trivias.add(trivia_11);
         String trivia_12[] = {
+                "12",
                 "Pa pegarnos el borondo",
                 "Pelao estás como achantado, vamos a tirar caja escuchando a los cuenteros en:",
                 "La estatua de Sebastián de Belalcazar",
@@ -150,6 +162,7 @@ public class DBHelper {
         };
         trivias.add(trivia_12);
         String trivia_13[] = {
+                "13",
                 "Pa pegarnos el borondo",
                 "Tengo ganas de salir a darme un borondo, camina pal Bulevar del Río y de paso de presento:",
                 "Iglesia la Merced",
@@ -163,6 +176,7 @@ public class DBHelper {
         // Cultura
         //-------------------------------------------------------------------------------------------
         String trivia_14[] = {
+                "14",
                 "Cultura",
                 "Parcerito, vos me caíste muy bien, te invito a que vengas el 25 de diciembre para que disfrutemos de:",
                 "La Feria de Cali",
@@ -173,6 +187,7 @@ public class DBHelper {
         };
         trivias.add(trivia_14);
         String trivia_15[] = {
+                "15",
                 "Cultura",
                 "Panita, si vas a volver por estos lados en diciembre me avisás para que vayamos al Bulevar del Río y veas lo bonito que es:",
                 "El Alumbrado de Cali",
@@ -183,6 +198,7 @@ public class DBHelper {
         };
         trivias.add(trivia_15);
         String trivia_16[] = {
+                "16",
                 "Cultura",
                 "Panita, ¿Vos no tenés ahijados? Aquí en Cali le podés dar el mejor regalo, comprale unas:",
                 "Macetas",
@@ -193,6 +209,7 @@ public class DBHelper {
         };
         trivias.add(trivia_16);
         String trivia_17[] = {
+                "17",
                 "Cultura",
                 "¿Sabes que me encantaba hacer cuando pequeño? Ir a volar cometa al parque del Ingenio, si querés probar pegate otro borondo por Cali en el mes de:",
                 "Agosto",
@@ -206,6 +223,7 @@ public class DBHelper {
         // Palabras tipicas
         //-------------------------------------------------------------------------------------------
         String trivia_18[] = {
+                "18",
                 "Palabras tipicas",
                 "Mirá, la gente a veces me dice que los caleños hablamos muy raro vé, ¿Vos si me entendes si te digo que pidas una ‘chuspa’?",
                 "Bolsa",
@@ -216,6 +234,7 @@ public class DBHelper {
         };
         trivias.add(trivia_18);
         String trivia_19[] = {
+                "19",
                 "Palabras tipicas",
                 "Mirá, la gente a veces me dice que los caleños hablamos muy raro vé, ¿Vos si me entendes si te digo que vayamos por el ‘fiambre’?",
                 "La comida",
@@ -226,16 +245,18 @@ public class DBHelper {
         };
         trivias.add(trivia_19);
         String trivia_20[] = {
+                "20",
                 "Palabras tipicas",
                 "Panita, por ahí dicen la malas lenguas que en Cali todos somos ‘melómanos’, ¡Y la verdad es que sí! ¿Vos si sabes de qué te estoy hablando?",
-                "Fanáticos de la salsa y la música\n",
+                "Fanáticos de la salsa y la música",
                 "Fanáticos del fútbol",
                 "Fanáticos del ajedrez",
-                "Fanáticos del ballet\n",
+                "Fanáticos del ballet",
                 "El melómano es aquél que siente extrema pasión por la música. En Cali lo hacemos por la salsa."
         };
         trivias.add(trivia_20);
         String trivia_21[] = {
+                "21",
                 "Palabras tipicas",
                 "Vos a mí me caíste muy bien vé, de ahora en adelante vamos a ser panitas, ¿Si me entendés?",
                 "Amigos",
