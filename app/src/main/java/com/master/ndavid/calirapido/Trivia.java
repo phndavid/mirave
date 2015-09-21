@@ -102,6 +102,7 @@ public class Trivia {
         int tipicas = (int) randomTipicas;
 
         Question theEating = getFiambreQuestions().get(eating);
+
         Question theMusic = getGuanguancoQuestions().get(music);
         Question theTuristicos = getBorondoQuestions().get(turisticos);
         Question theCultura = getCulturaQuestions().get(cultura);

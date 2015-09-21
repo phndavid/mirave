@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 
+
 public class ActivityGoodAnswer extends ActionBarActivity {
     private Button btn_continue;
     private Typeface tf;

@@ -86,4 +86,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="25dp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button"
+        android:layout_above="@+id/txt_question"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="72dp" />
+
 </RelativeLayout>

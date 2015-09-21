@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-
+import android.media.MediaPlayer;
 
 public class ActivityQuestion extends ActionBarActivity {
 
@@ -28,6 +28,7 @@ public class ActivityQuestion extends ActionBarActivity {
     private String feedback;
     private Typeface tf;
     private RelativeLayout relativeLayout;
+
 
     public void initialize(){
         relativeLayout = (RelativeLayout) findViewById(R.id.relaQ);
@@ -173,6 +174,8 @@ public class ActivityQuestion extends ActionBarActivity {
         }
         if(questionId==3){
             drawableId = R.drawable.mazamorra_xhdpi;
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.mazamorra);
+                mp.start();
         }
         if(questionId==4){
             drawableId = R.drawable.napa_xhdpi;
@@ -182,6 +185,8 @@ public class ActivityQuestion extends ActionBarActivity {
         }
         if(questionId==6){
             drawableId = R.drawable.oiga_xhdpi;
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.vea);
+            mp.start();
         }
         if(questionId==7){
             drawableId = R.drawable.radio_xhdpi;
