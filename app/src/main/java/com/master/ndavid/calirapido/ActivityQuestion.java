@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -25,7 +27,10 @@ public class ActivityQuestion extends ActionBarActivity {
     private String answerCorrect;
     private String feedback;
     private Typeface tf;
+    private RelativeLayout relativeLayout;
+
     public void initialize(){
+        relativeLayout = (RelativeLayout) findViewById(R.id.relaQ);
         tf=Typeface.createFromAsset(getAssets(),"fonts/CaviarDreams.ttf");
         trivia = new Trivia();
         num_question = 0;
@@ -45,6 +50,9 @@ public class ActivityQuestion extends ActionBarActivity {
     public void setQuestion(int num){
         ArrayList<Question> questions = trivia.getOnePlay();
         Question question = questions.get(num);
+        int id = question.getId();
+        int draId = getDrawableIdFromQuestionId(id);
+        relativeLayout.setBackgroundResource(draId);
         ArrayList<Answer> optionsAnswer = question.getOptionsAnswers();
         txt_question.setText(question.getQuestion());
         answerCorrect = optionsAnswer.get(0).getAnswer();
@@ -154,5 +162,65 @@ public class ActivityQuestion extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public int getDrawableIdFromQuestionId(int questionId){
+        int drawableId =R.drawable.cholado_xhdpi;
+        if(questionId==1){
+            drawableId = R.drawable.cholado_xhdpi;
+        }
+        if(questionId==2){
+            drawableId = R.drawable.empanada_xhdpi;
+        }
+        if(questionId==3){
+            drawableId = R.drawable.mazamorra_xhdpi;
+        }
+        if(questionId==4){
+            drawableId = R.drawable.napa_xhdpi;
+        }
+        if(questionId==5){
+
+        }
+        if(questionId==6){
+            drawableId = R.drawable.oiga_xhdpi;
+        }
+        if(questionId==7){
+            drawableId = R.drawable.radio_xhdpi;
+        }
+        if(questionId==8){
+            drawableId = R.drawable.calenas_xhdpi;
+        }
+        if(questionId==9){
+            drawableId = R.drawable.salsa_xhdpi;
+        }
+        if(questionId==10){
+            drawableId = R.drawable.pance_xhdpi;
+        }
+        if(questionId==11){
+            drawableId = R.drawable.trescruces_xhdpi;
+        }
+        if(questionId==12){
+            drawableId = R.drawable.cuenteros_xhdpi;
+        }
+        if(questionId==13){
+            drawableId = R.drawable.ermita_xhdpi;
+        }
+        if(questionId==14){
+            drawableId = R.drawable.feria_xhdpi;
+        }
+        if(questionId==15){
+            drawableId = R.drawable.alumbrado_xhdpi;
+        }
+        if(questionId==16){
+            drawableId = R.drawable.macetas_xhdpi;
+        }
+        if(questionId==17){
+            drawableId = R.drawable.cometa_xhdpi;
+        }
+        if(questionId>=18){
+            drawableId = R.drawable.palabras_xhdpi;
+        }
+        return drawableId;
+
+
     }
 }

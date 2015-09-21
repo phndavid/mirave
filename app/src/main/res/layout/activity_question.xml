@@ -6,7 +6,8 @@
     android:paddingTop="0dp"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:background="@drawable/empanada_xhdpi"
-    tools:context="com.master.ndavid.calirapido.ActivityQuestion">
+    tools:context="com.master.ndavid.calirapido.ActivityQuestion"
+    android:id="@+id/relaQ">
 
     <Button
         android:layout_width="wrap_content"

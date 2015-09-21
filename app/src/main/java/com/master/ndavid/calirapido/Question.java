@@ -11,12 +11,14 @@ public class Question {
     private String question;
     private ArrayList<Answer> optionsAnswers;
     private String explain;
+    private int id;
 
-    public Question(String type, String question, ArrayList<Answer> optionsAnswers, String explain){
+    public Question(int id,String type, String question, ArrayList<Answer> optionsAnswers, String explain){
         this.type = type;
         this.question = question;
         this.optionsAnswers = optionsAnswers;
         this.explain = explain;
+        this.id = id;
     }
     public String getType(){ return type; }
     public String getQuestion(){
@@ -27,5 +29,8 @@ public class Question {
     }
     public String getExplain(){
         return explain;
+    }
+    public int getId(){
+        return id;
     }
 }

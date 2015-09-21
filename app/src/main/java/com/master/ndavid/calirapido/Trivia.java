@@ -30,11 +30,11 @@ public class Trivia {
         for (int i = 0; i < trivias.size(); i++) {
             String[] trivia = trivias.get(i);
             ArrayList<Answer> optionsAnswer = new ArrayList<Answer>();
-            optionsAnswer.add(new Answer(trivia[2],true));
-            optionsAnswer.add(new Answer(trivia[3],false));
+            optionsAnswer.add(new Answer(trivia[3],true));
             optionsAnswer.add(new Answer(trivia[4],false));
             optionsAnswer.add(new Answer(trivia[5],false));
-            Question question = new Question(trivia[0],trivia[1],optionsAnswer,trivia[6]);
+            optionsAnswer.add(new Answer(trivia[6],false));
+            Question question = new Question(Integer.parseInt(trivia[0]),trivia[1],trivia[2],optionsAnswer,trivia[7]);
             questions.add(question);
         }
     }
