@@ -13,11 +13,15 @@ public class Trivia {
 
     private ArrayList<Question> questions;
     private DBHelper dbHelper;
-    private int puntaje;
+    private double puntajeTotal;
+    private int puntajeBien;
+    private int puntajeMal;
     public Trivia(){
         dbHelper = new DBHelper();
         questions = new ArrayList<Question>();
-        puntaje = 0;
+        puntajeTotal = 0;
+        puntajeBien=0;
+        puntajeMal=0;
         createQuestion();
     }
 
@@ -64,24 +68,50 @@ public class Trivia {
         }
         return borondoQuestions;
     }
+    public ArrayList<Question> getCulturaQuestions(){
+        ArrayList<Question> culturaQuestions = new ArrayList<Question>();
+        for(int i=0;i<questions.size();i++){
+            if(questions.get(i).getType().equals("Cultura")){
+                culturaQuestions.add(questions.get(i));
+            }
+        }
+        return culturaQuestions;
+    }
+    public ArrayList<Question> getTipicasQuestions(){
+        ArrayList<Question> tipicasQuestions = new ArrayList<Question>();
+        for(int i=0;i<questions.size();i++){
+            if(questions.get(i).getType().equals("Palabras tipicas")){
+                tipicasQuestions.add(questions.get(i));
+            }
+        }
+        return tipicasQuestions;
+    }
     public ArrayList<Question> getOnePlay(){
         ArrayList<Question> onePlay = new ArrayList<Question>();
 
         double randomEating = Math.random()*5;
         double randomMusic = Math.random()*4;
-        //double randomTuristicos = Math.random()*4;
+        double randomTuristicos = Math.random()*4;
+        double randomCultura = Math.random()*4;
+        double randomTipicas = Math.random()*4;
 
         int eating = (int) randomEating;
         int music = (int) randomMusic;
-        //int turisticos = (int) randomTuristicos;
+        int turisticos = (int) randomTuristicos;
+        int cultura = (int) randomCultura;
+        int tipicas = (int) randomTipicas;
 
         Question theEating = getFiambreQuestions().get(eating);
         Question theMusic = getGuanguancoQuestions().get(music);
-        //Question theTuristicos = getBorondoQuestions().get(turisticos);
+        Question theTuristicos = getBorondoQuestions().get(turisticos);
+        Question theCultura = getCulturaQuestions().get(cultura);
+        Question theTipicas = getTipicasQuestions().get(tipicas);
 
         onePlay.add(theEating);
         onePlay.add(theMusic);
-        //onePlay.add(theTuristicos);
+        onePlay.add(theTuristicos);
+        onePlay.add(theCultura);
+        onePlay.add(theTipicas);
 
         return onePlay;
     }
