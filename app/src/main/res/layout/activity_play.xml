@@ -12,7 +12,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="25dp"
-        android:text="PRECIONA PARA JUGAR"
+        android:text="PRESIONA PARA JUGAR"
         android:id="@+id/btn_play"
         android:onClick="btn_play"
         android:background="@android:color/transparent"

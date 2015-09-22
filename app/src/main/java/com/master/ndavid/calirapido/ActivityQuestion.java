@@ -39,11 +39,12 @@ public class ActivityQuestion extends ActionBarActivity {
     private int idBackgroundActual;
     private  MediaPlayer mpMazamorra;
     private  MediaPlayer mpVea;
-    private int idsQuestionImages[] = {R.drawable.cholado_xhdpi,R.drawable.empanada_xhdpi,R.drawable.mazamorra_xhdpi,R.drawable.napa_xhdpi,0,
+    private int idsQuestionImages[] = {
+            R.drawable.cholado_xhdpi,R.drawable.empanada_xhdpi,R.drawable.mazamorra_xhdpi,R.drawable.napa_xhdpi,R.drawable.oiga_xhdpi,
             R.drawable.oiga_xhdpi, R.drawable.radio_xhdpi,R.drawable.calenas_xhdpi,R.drawable.salsa_xhdpi,
             R.drawable.pance_xhdpi,R.drawable.trescruces_xhdpi, R.drawable.cuenteros_xhdpi,R.drawable.ermita_xhdpi,
             R.drawable.feria_xhdpi,R.drawable.alumbrado_xhdpi,R.drawable.macetas_xhdpi,R.drawable.cometa_xhdpi,R.drawable.palabras_xhdpi,
-            R.drawable.palabras_xhdpi,R.drawable.palabras_xhdpi};
+            R.drawable.palabras_xhdpi,R.drawable.palabras_xhdpi,R.drawable.palabras_xhdpi};
     private int idsOptionsImages[] ={R.drawable.aama_xhdpi,R.drawable.bama_xhdpi, R.drawable.aazul_xhdpi,R.drawable.bazul_xhdpi,
             R.drawable.arojo_xhdpi,R.drawable.brojo_xhdpi,R.drawable.averde_xhdpi,R.drawable.bverde_xhdpi,
             R.drawable.aoro_xhdpi,R.drawable.boro_xhdpi,R.drawable.anaranja_xhdpi,R.drawable.bnaranja_xhdpi,
@@ -98,7 +99,7 @@ public class ActivityQuestion extends ActionBarActivity {
         btn_replay.setEnabled(false);
 
         mpMazamorra = MediaPlayer.create(this, R.raw.mazamorra);
-        mpVea=MediaPlayer.create(this, R.raw.vea);
+        mpVea = MediaPlayer.create(this, R.raw.vea);
 
 
     }
@@ -184,6 +185,7 @@ public class ActivityQuestion extends ActionBarActivity {
         return answers;
     }
     public  void feedBackAnswer(View view){
+
        if((num_question+1) < trivia.getOnePlay().size()) {
            Button b = (Button) view;
            String buttonText = b.getText().toString();
@@ -239,33 +241,40 @@ public class ActivityQuestion extends ActionBarActivity {
     }
     public int getDrawableIdFromQuestionId(int questionId) {
         int drawableId = R.drawable.cholado_xhdpi;
+
         for (int i = 0; i < idsQuestionImages.length; i++) {
             if (questionId == (i + 1)) {
                 btn_replay.setEnabled(false);
+
+                if(mpMazamorra.isPlaying()){
+                        mpMazamorra.stop();
+                    }
+
+                if(mpVea.isPlaying()){
+                    mpVea.stop();
+                }
+
                 if (questionId == 3) {
-                    mpMazamorra.start();
 
                     btn_replay.setEnabled(true);
+                    mpMazamorra.start();
                     btn_replay.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View view) {
                             mpMazamorra.start();
                         }
                     });
-                }else {
-                    mpMazamorra.stop();
                 }
-                if (questionId == 6) {
-                    mpVea.start();
+                   if (questionId == 6) {
 
                     btn_replay.setEnabled(true);
+                    mpVea.start();
                     btn_replay.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View view) {
                             mpVea.start();
                         }
                     });
-                }else{
-                    mpVea.stop();
                 }
+
                 return idsQuestionImages[i];
             }
         }

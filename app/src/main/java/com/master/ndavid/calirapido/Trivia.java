@@ -38,12 +38,10 @@ public class Trivia {
             questions.add(question);
         }
     }
-    public ArrayList<Question> getQuestions(){
-        return  questions;
-    }
+
     public ArrayList<Question> getFiambreQuestions(){
         ArrayList<Question> fiambreQuestions = new ArrayList<Question>();
-        for(int i=0;i<questions.size();i++){
+        for(int i=0;i<questions.size()-1;i++){
             if(questions.get(i).getType().equals("Fiambre")){
                 fiambreQuestions.add(questions.get(i));
             }
@@ -89,7 +87,7 @@ public class Trivia {
     public ArrayList<Question> getOnePlay(){
         ArrayList<Question> onePlay = new ArrayList<Question>();
 
-        double randomEating = Math.random()*5;
+        double randomEating = Math.random()*4;
         double randomMusic = Math.random()*4;
         double randomTuristicos = Math.random()*4;
         double randomCultura = Math.random()*4;
