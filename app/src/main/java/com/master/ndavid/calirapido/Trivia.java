@@ -11,17 +11,17 @@ import java.util.Map;
  */
 public class Trivia {
 
+    public static int TOTAL_PREGS=5;
+
     private ArrayList<Question> questions;
     private DBHelper dbHelper;
     private double puntajeTotal;
     private int puntajeBien;
-    private int puntajeMal;
     public Trivia(){
         dbHelper = new DBHelper();
         questions = new ArrayList<Question>();
-        puntajeTotal = 0;
+        puntajeTotal = new Double(0.0);
         puntajeBien=0;
-        puntajeMal=0;
         createQuestion();
     }
 
@@ -115,6 +115,22 @@ public class Trivia {
         onePlay.add(theTipicas);
 
         return onePlay;
+    }
+    public void preguntaBuena(){
+        puntajeBien++;
+        System.out.println("Puntaje Bien: " + puntajeBien);
+    }
+    public void calcularPorcentajePartida(){
+        //double punt = new Double(puntajeBien)/TOTAL_PREGS*100;
+        puntajeTotal = (new Double(puntajeBien)/TOTAL_PREGS)*100;
+        //System.out.println("puntajeparcial en el calculo: " + punt);
+        System.out.println("puntajeBien en el calculo: " + puntajeBien);
+        System.out.println("TOTALPREGS: " + TOTAL_PREGS);
+        System.out.println("puntajeTotal en el calculo: " + puntajeTotal);
+    }
+    public double getPuntajeTotal(){
+        System.out.println("PuntajeTotal: " + puntajeTotal);
+        return puntajeTotal;
     }
 
 }

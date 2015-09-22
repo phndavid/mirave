@@ -17,7 +17,7 @@ public class ActivityBadAnswer extends ActionBarActivity {
     private Button btn_continue;
     private Typeface tf;
     private boolean finish;
-    private int score;
+    private double score;
     public void btn_continue(View view){
         if(finish){
             Intent theIntent = new Intent(this, ActivityFeedBack.class);
@@ -35,7 +35,7 @@ public class ActivityBadAnswer extends ActionBarActivity {
         Bundle bundle = getIntent().getExtras();
         String explication = bundle.getString("FEEDBACK");
         finish = bundle.getBoolean("ultima");
-        score = bundle.getInt("puntaje");
+        score = bundle.getDouble("puntaje");
         tf= Typeface.createFromAsset(getAssets(), "fonts/CaviarDreams.ttf");
         btn_continue = (Button) findViewById(R.id.btn_continue);
         btn_continue.setTypeface(tf);

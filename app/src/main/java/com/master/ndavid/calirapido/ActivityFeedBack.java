@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class ActivityFeedBack extends ActionBarActivity {
 
-    private int score;
+    private double score;
     private TextView txtPuntaje;
 
     public void btn_newGame(View view){
@@ -26,8 +26,9 @@ public class ActivityFeedBack extends ActionBarActivity {
         txtPuntaje = (TextView) findViewById(R.id.txt_puntaje);
         Bundle bundle = getIntent().getExtras();
         score=0;
-        score = bundle.getInt("puntajeF");
-        txtPuntaje.setText("Puntaje: " + score);
+        score = bundle.getDouble("puntajeF");
+        int theScore = new Double(score).intValue();
+        txtPuntaje.setText("Puntaje: " + theScore + "%");
     }
 
 

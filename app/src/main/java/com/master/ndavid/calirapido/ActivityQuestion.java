@@ -188,8 +188,9 @@ public class ActivityQuestion extends ActionBarActivity {
            Button b = (Button) view;
            String buttonText = b.getText().toString();
            if (buttonText.equals(answerCorrect)) {
+               trivia.preguntaBuena();
                Intent theIntent = new Intent(this, ActivityGoodAnswer.class);
-               theIntent.putExtra("puntaje",0);
+               theIntent.putExtra("puntaje",0.0);
                theIntent.putExtra("ultima",false);
                startActivity(theIntent);
                setQuestion(++num_question);
@@ -197,7 +198,7 @@ public class ActivityQuestion extends ActionBarActivity {
            } else {
                Intent theIntent = new Intent(this, ActivityBadAnswer.class);
                theIntent.putExtra("FEEDBACK", feedback);
-               theIntent.putExtra("puntaje",0);
+               theIntent.putExtra("puntaje",0.0);
                theIntent.putExtra("ultima",false);
                startActivity(theIntent);
                setQuestion(++num_question);
@@ -207,13 +208,15 @@ public class ActivityQuestion extends ActionBarActivity {
            String buttonText = b.getText().toString();
            if(buttonText.equals(answerCorrect)){
                Intent theIntent = new Intent(this, ActivityGoodAnswer.class);
-               theIntent.putExtra("puntaje",25);
+               trivia.calcularPorcentajePartida();
+               theIntent.putExtra("puntaje",trivia.getPuntajeTotal());
                theIntent.putExtra("ultima",true);
                startActivity(theIntent);
            }else{
                Intent theIntent = new Intent(this, ActivityBadAnswer.class);
                theIntent.putExtra("FEEDBACK", feedback);
-               theIntent.putExtra("puntaje",25);
+               trivia.calcularPorcentajePartida();
+               theIntent.putExtra("puntaje",trivia.getPuntajeTotal());
                theIntent.putExtra("ultima",true);
                startActivity(theIntent);
            }
