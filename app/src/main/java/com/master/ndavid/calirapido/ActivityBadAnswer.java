@@ -16,8 +16,17 @@ public class ActivityBadAnswer extends ActionBarActivity {
     private TextView txt_explain;
     private Button btn_continue;
     private Typeface tf;
+    private boolean finish;
+    private int score;
     public void btn_continue(View view){
-        finish();
+        if(finish){
+            Intent theIntent = new Intent(this, ActivityFeedBack.class);
+            theIntent.putExtra("puntajeF",score);
+            startActivity(theIntent);
+            finish();
+        }else{
+            finish();
+        }
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +34,8 @@ public class ActivityBadAnswer extends ActionBarActivity {
         setContentView(R.layout.activity_activity_bad_answer);
         Bundle bundle = getIntent().getExtras();
         String explication = bundle.getString("FEEDBACK");
+        finish = bundle.getBoolean("ultima");
+        score = bundle.getInt("puntaje");
         tf= Typeface.createFromAsset(getAssets(), "fonts/CaviarDreams.ttf");
         btn_continue = (Button) findViewById(R.id.btn_continue);
         btn_continue.setTypeface(tf);

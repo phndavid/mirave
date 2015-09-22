@@ -6,18 +6,28 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class ActivityFeedBack extends ActionBarActivity {
 
+    private int score;
+    private TextView txtPuntaje;
+
     public void btn_newGame(View view){
         Intent theIntent = new Intent(this, ActivityIntro.class);
         startActivity(theIntent);
+        finish();
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_feed_back);
+        txtPuntaje = (TextView) findViewById(R.id.txt_puntaje);
+        Bundle bundle = getIntent().getExtras();
+        score=0;
+        score = bundle.getInt("puntajeF");
+        txtPuntaje.setText("Puntaje: " + score);
     }
 
 

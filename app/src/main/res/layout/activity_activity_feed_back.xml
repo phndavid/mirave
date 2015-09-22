@@ -18,22 +18,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No es del barrio"
-        android:id="@+id/txt_barrio"
+        android:text="Puntaje:"
+        android:id="@+id/txt_puntaje"
         android:layout_marginTop="34dp"
         android:layout_alignTop="@+id/txt_rolo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mas caleño que una chuspa"
-        android:id="@+id/textView"
-        android:layout_below="@+id/txt_barrio"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="22dp" />
 
     <Button
         android:layout_width="wrap_content"
