@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -21,6 +22,7 @@ public class ActivityFeedBack extends ActionBarActivity {
     private double score;
     private TextView txtPuntaje;
     private RelativeLayout relativeLayout;
+    private ImageView img_chonta;
 
     public void btn_newGame(View view){
         Intent theIntent = new Intent(this, ActivityIntro.class);
@@ -32,13 +34,14 @@ public class ActivityFeedBack extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_feed_back);
         txtPuntaje = (TextView) findViewById(R.id.txt_puntaje);
+        img_chonta = (ImageView) findViewById(R.id.img_chonta);
         relativeLayout = (RelativeLayout) findViewById(R.id.relativeF);
         Bundle bundle = getIntent().getExtras();
         score=0;
         score = bundle.getDouble("puntajeF");
         int theScore = new Double(score).intValue();
         relativeLayout.setBackgroundResource(definirFondo(theScore));
-        txtPuntaje.setText("Puntaje: " + theScore + "%");
+        txtPuntaje.setText(theScore + "%");
     }
 
 
@@ -67,18 +70,23 @@ public class ActivityFeedBack extends ActionBarActivity {
         int fondo = 0;
         if(puntaje==0){
             fondo = CERO;
+            img_chonta.setImageResource(R.drawable.chontamala_xhdpi);
         }
         if(puntaje>0 && puntaje<25){
             fondo=UNO;
+            img_chonta.setImageResource(R.drawable.chontamala_xhdpi);
         }
         if(puntaje>=25 && puntaje<50){
             fondo=DOS;
+            img_chonta.setImageResource(R.drawable.chontabuena_xhdpi);
         }
         if(puntaje>=50 && puntaje<75){
             fondo=TRES;
+            img_chonta.setImageResource(R.drawable.chontabuena_xhdpi);
         }
         if(puntaje>=75){
             fondo=CUATRO;
+            img_chonta.setVisibility(View.INVISIBLE);
         }
         return fondo;
     }

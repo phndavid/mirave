@@ -7,23 +7,13 @@
     tools:context="com.master.ndavid.calirapido.ActivityFeedBack"
     android:id="@+id/relativeF">
 
-    <TextView android:text="Rolo" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="95dp"
-        android:id="@+id/txt_rolo"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Puntaje:"
         android:id="@+id/txt_puntaje"
-        android:layout_marginTop="34dp"
-        android:layout_alignTop="@+id/txt_rolo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:textSize="50dp"
+        android:layout_above="@+id/btn_newGame"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -32,11 +22,16 @@
         android:background="@android:color/transparent"
         android:id="@+id/btn_newGame"
         android:onClick="btn_newGame"
-        android:layout_marginBottom="25dp"
-        android:layout_above="@+id/txt_rolo"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
-
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_chonta"
+        android:src="@drawable/chontabuena_xhdpi"
+        android:layout_above="@+id/txt_puntaje"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
