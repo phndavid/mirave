@@ -6,13 +6,21 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
 public class ActivityFeedBack extends ActionBarActivity {
 
+    public static final int CERO = R.drawable.rolo_xhdpi;
+    public static final int UNO = R.drawable.barrio_xhdpi;
+    public static final int DOS = R.drawable.culturizate_xhdpi;
+    public static final int TRES = R.drawable.pelo_xhdpi;
+    public static final int CUATRO = R.drawable.caleno_xhdpi;
+
     private double score;
     private TextView txtPuntaje;
+    private RelativeLayout relativeLayout;
 
     public void btn_newGame(View view){
         Intent theIntent = new Intent(this, ActivityIntro.class);
@@ -24,10 +32,12 @@ public class ActivityFeedBack extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_feed_back);
         txtPuntaje = (TextView) findViewById(R.id.txt_puntaje);
+        relativeLayout = (RelativeLayout) findViewById(R.id.relativeF);
         Bundle bundle = getIntent().getExtras();
         score=0;
         score = bundle.getDouble("puntajeF");
         int theScore = new Double(score).intValue();
+        relativeLayout.setBackgroundResource(definirFondo(theScore));
         txtPuntaje.setText("Puntaje: " + theScore + "%");
     }
 
@@ -52,5 +62,24 @@ public class ActivityFeedBack extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public int definirFondo(int puntaje){
+        int fondo = 0;
+        if(puntaje==0){
+            fondo = CERO;
+        }
+        if(puntaje>0 && puntaje<25){
+            fondo=UNO;
+        }
+        if(puntaje>=25 && puntaje<50){
+            fondo=DOS;
+        }
+        if(puntaje>=50 && puntaje<75){
+            fondo=TRES;
+        }
+        if(puntaje>=75){
+            fondo=CUATRO;
+        }
+        return fondo;
     }
 }

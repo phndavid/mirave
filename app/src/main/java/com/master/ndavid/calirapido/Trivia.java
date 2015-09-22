@@ -11,7 +11,7 @@ import java.util.Map;
  */
 public class Trivia {
 
-    public static int TOTAL_PREGS=5;
+    public static final int TOTAL_PREGS=5;
 
     private ArrayList<Question> questions;
     private DBHelper dbHelper;

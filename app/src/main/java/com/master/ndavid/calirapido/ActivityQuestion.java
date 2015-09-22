@@ -211,6 +211,7 @@ public class ActivityQuestion extends ActionBarActivity {
                trivia.calcularPorcentajePartida();
                theIntent.putExtra("puntaje",trivia.getPuntajeTotal());
                theIntent.putExtra("ultima",true);
+               finish();
                startActivity(theIntent);
            }else{
                Intent theIntent = new Intent(this, ActivityBadAnswer.class);
@@ -218,6 +219,7 @@ public class ActivityQuestion extends ActionBarActivity {
                trivia.calcularPorcentajePartida();
                theIntent.putExtra("puntaje",trivia.getPuntajeTotal());
                theIntent.putExtra("ultima",true);
+               finish();
                startActivity(theIntent);
            }
        }
