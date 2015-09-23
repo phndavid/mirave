@@ -12,20 +12,10 @@ import android.widget.Button;
 
 
 public class ActivityGoodAnswer extends ActionBarActivity {
-    private Button btn_continue;
     private Typeface tf;
     private boolean finish;
     private double score;
-    public void btn_continue(View view){
-        if(finish){
-            Intent theIntent = new Intent(this, ActivityFeedBack.class);
-            theIntent.putExtra("puntajeF",score);
-            startActivity(theIntent);
-            finish();
-        }else{
-            finish();
-        };
-    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,9 +23,7 @@ public class ActivityGoodAnswer extends ActionBarActivity {
         Bundle bundle = getIntent().getExtras();
         finish = bundle.getBoolean("ultima");
         score = bundle.getDouble("puntaje");
-        tf= Typeface.createFromAsset(getAssets(), "fonts/CaviarDreams.ttf");
-        btn_continue= (Button)findViewById(R.id.btn_continue);
-        btn_continue.setTypeface(tf);
+        tf= Typeface.createFromAsset(getAssets(), "fonts/Walkway SemiBold.ttf");
     }
 
 
@@ -59,5 +47,15 @@ public class ActivityGoodAnswer extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void continued(View view){
+        if(finish){
+            Intent theIntent = new Intent(this, ActivityFeedBack.class);
+            theIntent.putExtra("puntajeF",score);
+            startActivity(theIntent);
+            finish();
+        }else{
+            finish();
+        };
     }
 }

@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -78,7 +79,7 @@ public class ActivityQuestion extends ActionBarActivity {
     public void initialize(){
 
         relativeLayout = (RelativeLayout) findViewById(R.id.relaQ);
-        tf=Typeface.createFromAsset(getAssets(),"fonts/CaviarDreams.ttf");
+        tf=Typeface.createFromAsset(getAssets(),"fonts/Walkway SemiBold.ttf");
         trivia = new Trivia();
         num_question = 0;
         answerCorrect = "";
@@ -193,23 +194,24 @@ public class ActivityQuestion extends ActionBarActivity {
                trivia.preguntaBuena();
                Intent theIntent = new Intent(this, ActivityGoodAnswer.class);
                theIntent.putExtra("puntaje",0.0);
-               theIntent.putExtra("ultima",false);
+               theIntent.putExtra("ultima", false);
                startActivity(theIntent);
-               setQuestion(++num_question);
+               //setQuestion(num_question++);
                
            } else {
                Intent theIntent = new Intent(this, ActivityBadAnswer.class);
                theIntent.putExtra("FEEDBACK", feedback);
                theIntent.putExtra("puntaje",0.0);
-               theIntent.putExtra("ultima",false);
+               theIntent.putExtra("ultima", false);
                startActivity(theIntent);
-               setQuestion(++num_question);
+               //setQuestion(num_question++);
            }
        }else{
            Button b = (Button) view;
            String buttonText = b.getText().toString();
            if(buttonText.equals(answerCorrect)){
                Intent theIntent = new Intent(this, ActivityGoodAnswer.class);
+               trivia.preguntaBuena();
                trivia.calcularPorcentajePartida();
                theIntent.putExtra("puntaje",trivia.getPuntajeTotal());
                theIntent.putExtra("ultima",true);
@@ -240,6 +242,11 @@ public class ActivityQuestion extends ActionBarActivity {
        feedBackAnswer(view);
     }
     public int getDrawableIdFromQuestionId(int questionId) {
+        txt_question.setTextColor(Color.BLACK);
+        answer_a.setTextColor(Color.BLACK);
+        answer_b.setTextColor(Color.BLACK);
+        answer_c.setTextColor(Color.BLACK);
+        answer_d.setTextColor(Color.BLACK);
         int drawableId = R.drawable.cholado_xhdpi;
 
         for (int i = 0; i < idsQuestionImages.length; i++) {
@@ -252,6 +259,13 @@ public class ActivityQuestion extends ActionBarActivity {
 
                 if(mpVea.isPlaying()){
                     mpVea.stop();
+                }
+                if(questionId==15){
+                    txt_question.setTextColor(Color.WHITE);
+                    answer_a.setTextColor(Color.WHITE);
+                    answer_b.setTextColor(Color.WHITE);
+                    answer_c.setTextColor(Color.WHITE);
+                    answer_d.setTextColor(Color.WHITE);
                 }
 
                 if (questionId == 3) {
@@ -329,5 +343,10 @@ public class ActivityQuestion extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        setQuestion(num_question++);
 
+    }
 }

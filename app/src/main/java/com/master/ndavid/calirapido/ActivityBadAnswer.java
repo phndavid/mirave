@@ -14,20 +14,9 @@ import android.widget.TextView;
 public class ActivityBadAnswer extends ActionBarActivity {
 
     private TextView txt_explain;
-    private Button btn_continue;
     private Typeface tf;
     private boolean finish;
     private double score;
-    public void btn_continue(View view){
-        if(finish){
-            Intent theIntent = new Intent(this, ActivityFeedBack.class);
-            theIntent.putExtra("puntajeF",score);
-            startActivity(theIntent);
-            finish();
-        }else{
-            finish();
-        }
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,9 +25,7 @@ public class ActivityBadAnswer extends ActionBarActivity {
         String explication = bundle.getString("FEEDBACK");
         finish = bundle.getBoolean("ultima");
         score = bundle.getDouble("puntaje");
-        tf= Typeface.createFromAsset(getAssets(), "fonts/CaviarDreams.ttf");
-        btn_continue = (Button) findViewById(R.id.btn_continue);
-        btn_continue.setTypeface(tf);
+        tf= Typeface.createFromAsset(getAssets(), "fonts/Walkway SemiBold.ttf");
         txt_explain = (TextView) findViewById(R.id.txt_explain);
         txt_explain.setTypeface(tf);
         txt_explain.setText(explication);
@@ -65,5 +52,15 @@ public class ActivityBadAnswer extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void continued(View view){
+        if(finish){
+            Intent theIntent = new Intent(this, ActivityFeedBack.class);
+            theIntent.putExtra("puntajeF",score);
+            startActivity(theIntent);
+            finish();
+        }else{
+            finish();
+        }
     }
 }

@@ -8,25 +8,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 
 public class ActivityPlay extends ActionBarActivity {
 
 
-    private Button btn_play;
     private Typeface tf;
-    public void btn_play(View view){
-        Intent theIntent = new Intent(this, ActivityIntro.class);
-        startActivity(theIntent);
-    }
+    private RelativeLayout relativeLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
-        btn_play = (Button) findViewById(R.id.btn_play);
-        tf= Typeface.createFromAsset(getAssets(), "fonts/CaviarDreams.ttf");
-        btn_play.setTypeface(tf);
-
+        relativeLayout = (RelativeLayout) findViewById(R.id.relaPlay);
+        tf= Typeface.createFromAsset(getAssets(), "fonts/Walkway SemiBold.ttf");
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -47,5 +43,10 @@ public class ActivityPlay extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void jugar(View view){
+        Intent theIntent = new Intent(this, ActivityIntro.class);
+        startActivity(theIntent);
+        finish();
     }
 }

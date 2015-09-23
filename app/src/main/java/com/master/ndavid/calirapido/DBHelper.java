@@ -17,10 +17,10 @@ public class DBHelper {
         String trivia_1[] = {
                 "1",
                 "Fiambre",
-                "Mirá panita llegamos a las canchas Panamericanas vé. Te voy a invitar a un cholao.\n" +
+                "Mirá panita, llegamos a las canchas Panamericanas vé. Te voy a invitar a un cholao.\n" +
                 "¿Vos de qué crees que está hecha esta vaina?\n",
                 "Hielo, frutas, salsas, leche condensada",
-                "Hielo, queso, helado, coco,",
+                "Hielo, queso, helado, coco",
                 "Hielo, ripio de papa, arroz",
                 "Hielo, lulo, maiz, piña",
                 "El Cholado es un raspado de hielo, típico del departamento del Valle Del Cauca. Tiene base de frutas, jarabes de diferentes sabores y leche condesada.",
@@ -31,8 +31,8 @@ public class DBHelper {
         String trivia_2[] = {
                 "2",
                 "Fiambre",
-                "Llavecita vámonos pa’ la fritanga de Doña Rosario, veni y te invito a una empanada. \n" +
-                "¿Con que será que bajamos esto?\n",
+                "Llavecita vámonos pa’ la fritanga de Doña Rosario, vení y te invito a una empanada. \n" +
+                "¿Con qué será que bajamos esto?\n",
                 "Champus",
                 "Gaseosa",
                 "Agua",
@@ -47,11 +47,11 @@ public class DBHelper {
                 "3",
                 "Fiambre",
                 "¡Uy, escuchá eso! Por ahí viene el de…",
-                "la Manzamora y champus",
+                "La Manzamora y champus",
                 "La Lulada",
                 "Los Helados",
-                " el Ponche",
-                "En la mayoría de los barrios de Cali, es común ver a una persona en un triciclo presionando una bocina con ese sonido y vendiendo estos productos.",
+                "El Ponche",
+                "En la mayoría de los barrios de Cali, es común ver a una persona en un triciclo presionando una bocina con ese sonido y vendiendo mazamorra y champus.",
                 "naranja"
 
         };
@@ -60,7 +60,7 @@ public class DBHelper {
         String trivia_4[] = {
                 "4",
                 "Fiambre",
-                "Uy no esa empanda me quedó en un diente, pidamole a Doña Rosario…",
+                "¡Uy no! Esa empanda me quedó en un diente, pidamosle a Doña Rosario…",
                 "La ñapa",
                 "Una más",
                 "Otrica",
@@ -90,7 +90,7 @@ public class DBHelper {
         String trivia_6[] = {
                 "6",
                 "Guaguanco",
-                "Panita como se llama este tema ‘Oilo’.",
+                "Panita cómo se llama este tema, ‘Oilo’.",
                 "Oiga mire vea",
                 "Las caleñas son como las flores",
                 "Cali pachanguero",
@@ -103,12 +103,12 @@ public class DBHelper {
         String trivia_7[] = {
                 "7",
                 "Guaguanco",
-                "Ve bacan, escucha la canción que está sonando en la radio: “¡Del puente para allá es ________, de puente para aca es Cali!”",
+                "Ve bacán, escuchá la canción que está sonando en la radio: “¡Del puente para allá es ________, del puente para acá está Cali!”",
                 "Juanchito",
                 "Menga",
                 "La 66",
                 "La Sexta",
-                "Esta canción hace parte de la tradición caleña y es uno de los mas grandes éxitos del grupo.",
+                "Esta canción hace parte de la tradición caleña y es uno de los más grandes éxitos del grupo.",
                 "verde"
         };
         trivias.add(trivia_7);
@@ -116,7 +116,7 @@ public class DBHelper {
         String trivia_8[] = {
                 "8",
                 "Guaguanco",
-                "Mira esa vieja Ve, es que definitivamente las caleñas son como:",
+                "Mirá esa vieja Ve, es que definitivamente las caleñas son como:",
                 "Las flores",
                 "Modelos",
                 "Rusas",

@@ -7,19 +7,8 @@
     android:paddingTop="0dp"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Play"
     android:background="@drawable/inicio_xhdpi"
-    >
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:text="PRESIONA PARA JUGAR"
-        android:id="@+id/btn_play"
-        android:onClick="btn_play"
-        android:background="@android:color/transparent"
-        android:textSize="15dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="#ffffff" />
+    android:id="@+id/relaPlay"
+    android:onClick="jugar">
 
 
 </RelativeLayout>

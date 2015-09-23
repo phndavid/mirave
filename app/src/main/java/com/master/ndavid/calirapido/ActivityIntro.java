@@ -21,12 +21,13 @@ public class ActivityIntro extends ActionBarActivity {
         Intent theIntent = new Intent(this, ActivityQuestion.class);
         //theIntent.putExtra("")
         startActivity(theIntent);
+        finish();
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_intro);
-        tf= Typeface.createFromAsset(getAssets(), "fonts/CaviarDreams.ttf");
+        tf= Typeface.createFromAsset(getAssets(), "fonts/Walkway SemiBold.ttf");
         txt_intro = (TextView) findViewById(R.id.txt_intro);
         txt_intro.setTypeface(tf);
     }

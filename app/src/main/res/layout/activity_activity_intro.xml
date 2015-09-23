@@ -7,7 +7,7 @@
     android:background="@drawable/historia_xhdpi"
     tools:context="com.master.ndavid.calirapido.ActivityIntro">
 
-    <TextView android:text="En el barrio me dicen calidoso me contaron que estas en Cali por unos días y estas más aburrido que empanada sin ají. Sabes qué? veni y tírate un borondo conmigo pa’ que conozcas" android:layout_width="wrap_content"
+    <TextView android:text="En el barrio me dicen Calidoso, me contaron que estás en Cali por unos días y estás más aburrido que empanada sin ají. ¿Sabes qué? vení y tírate un borondo conmigo pa’ que conozcas" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/txt_intro"
         android:gravity="center"
