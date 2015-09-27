@@ -88,6 +88,7 @@ public class ActivityFeedBack extends ActionBarActivity {
             fondo=CUATRO;
             img_chonta.setVisibility(View.INVISIBLE);
         }
+
         return fondo;
     }
 }

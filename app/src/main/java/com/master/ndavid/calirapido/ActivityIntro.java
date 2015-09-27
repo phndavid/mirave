@@ -17,7 +17,7 @@ public class ActivityIntro extends ActionBarActivity {
     private Trivia trivia;
 
 
-    public void btn_continue(View view){
+    public void play(View view){
         Intent theIntent = new Intent(this, ActivityQuestion.class);
         //theIntent.putExtra("")
         startActivity(theIntent);
