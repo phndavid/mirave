@@ -44,9 +44,9 @@ public class ActivityQuestion extends ActionBarActivity {
             R.drawable.cholado_xhdpi,R.drawable.empanada_xhdpi,R.drawable.mazamorra_xhdpi,R.drawable.napa_xhdpi,R.drawable.oiga_xhdpi,
             R.drawable.oiga_xhdpi, R.drawable.radio_xhdpi,R.drawable.calenas_xhdpi,R.drawable.salsa_xhdpi,
             R.drawable.pance_xhdpi,R.drawable.trescruces_xhdpi, R.drawable.cuenteros_xhdpi,R.drawable.ermita_xhdpi,
-            R.drawable.feria_xhdpi,R.drawable.alumbrado_xhdpi,R.drawable.macetas_xhdpi,R.drawable.cometa_xhdpi,R.drawable.palabras_xhdpi,
-            R.drawable.palabras_xhdpi,R.drawable.palabras_xhdpi,R.drawable.palabras_xhdpi};
-    private int idsOptionsImages[] ={R.drawable.aama_xhdpi,R.drawable.bama_xhdpi, R.drawable.aazul_xhdpi,R.drawable.bazul_xhdpi,
+            R.drawable.feria_xhdpi,R.drawable.alumbrado_xhdpi,R.drawable.macetas_xhdpi,R.drawable.cometa_xhdpi,R.drawable.palabras,
+            R.drawable.palabras,R.drawable.palabras,R.drawable.palabras};
+    private int idsOptionsImages[] ={R.drawable.aamarrillo_xhdpi,R.drawable.bamarrillo_xhdpi, R.drawable.aazul_xhdpi,R.drawable.bazul_xhdpi,
             R.drawable.arojo_xhdpi,R.drawable.brojo_xhdpi,R.drawable.averde_xhdpi,R.drawable.bverde_xhdpi,
             R.drawable.aoro_xhdpi,R.drawable.boro_xhdpi,R.drawable.anaranja_xhdpi,R.drawable.bnaranja_xhdpi,
             R.drawable.arosa_xhdpi,R.drawable.brosa_xhdpi  };
