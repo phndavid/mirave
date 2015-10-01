@@ -174,17 +174,17 @@ public class DBHelper {
                 "Parque de la Caña",
                 "Parque de Jovita Feijoo",
                 "La estatua de Sebastián de Belalcazar",
-                "En el barrio San Antonio se encuentran una de las iglesias más históricas de la ciudad, aquí se reúnen personas a contar historias o cuentos que hacen reír.",
+                "En el barrio San Antonio se encuentra una de las iglesias más históricas de la ciudad, aquí se reúnen personas a contar historias o cuentos que hacen reír.",
                 "oro"
         };
         trivias.add(trivia_12);
         String trivia_13[] = {
                 "13",
                 "Pa pegarnos el borondo",
-                "Tengo ganas de salir a darme un borondo, camina pal Bulevar del Río y de paso de presento:",
-                "Iglesia la Ermita",
-                "Iglesia la Merced",
-                "Plaza de Toros",
+                "Tengo ganas de salir a darme un borondo, camina pal Bulevar del Río y de paso te presento:",
+                "La iglesia la Ermita",
+                "La iglesia la Merced",
+                "La plaza de Toros",
                 "Estación del Ferrocarril",
                 "El bulevar del río es un sendero peatonal, al margen del río Cali, que recorre varios sitios turísticos como la Ermita y el Gato de Tejada.",
                 "verde"
@@ -232,7 +232,7 @@ public class DBHelper {
         String trivia_17[] = {
                 "17",
                 "Cultura",
-                "¿Sabes que me encantaba hacer cuando pequeño? Ir a volar cometa al parque del Ingenio, si querés probar pegate otro borondo por Cali en el mes de:",
+                "¿Sabés que me encantaba hacer cuando pequeño? Ir a volar cometa al parque del Ingenio, si querés probar pegate otro borondo por Cali en el mes de:",
                 "Agosto",
                 "Marzo",
                 "Diciembre",
